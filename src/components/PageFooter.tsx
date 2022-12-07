@@ -158,7 +158,7 @@ Props) => {
                 </Box>
               </Link>
               <Typography color={COLORS.blueBayoux}>
-                We are a Cloud Native Computing Foundation project.
+                We are a Cloud Native Computing Foundation incubating project.
               </Typography>
             </Box>
             <Box
