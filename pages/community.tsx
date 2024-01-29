@@ -127,9 +127,9 @@ const Why = ({}: Props) => {
                 mb: 2,
               }}
             >
-              Upbound is the creator of open source Crossplane. With security, support, and
-              official providers, Upbound’s platform gives you everything you need to scale
-              Crossplane and manage all your infrastructure in one place.
+              Upbound is the creator of open source Crossplane. With security, support, and official
+              providers, Upbound’s platform gives you everything you need to scale Crossplane and
+              manage all your infrastructure in one place.
             </Typography>
             <Box sx={btnContainer}>
               <Button styleType="turquoiseContained" href={routes.upboundUrl} target="_blank">
