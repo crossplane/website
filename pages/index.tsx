@@ -3,14 +3,10 @@ import React from 'react';
 import Lottie from 'lottie-react';
 import GitHubButton from 'react-github-btn';
 
-import { GetStaticProps } from 'next';
-
 import Image from 'next/future/image';
 
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, fontAvenirBold, MQ } from 'src/theme';
-
-import handleGetStaticProps from 'src/utils/handleGetStaticProps';
 
 import * as routes from 'src/routes';
 
@@ -31,6 +27,9 @@ import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.pn
 import truckAnim from 'public/animations/truck.json';
 import controlPlanes from 'public/animations/control_planes.json';
 import codingAnim from 'public/animations/coding.json';
+import { indexData } from 'src/static-cms';
+
+const cmsData = indexData;
 
 const headerSection: SxProps = {
   pt: { _: 13, md: 23.5 },
@@ -269,14 +268,13 @@ const FeatureBlock = ({ feature, index }: { feature: HomePageFeature; index: num
       >
         <Box>
           <Lottie animationData={animOptions[index % 3]} loop={true} />
-          {/* {header_image && header_image[0] && <CMSImage value={header_image[0].value} priority />} */}
         </Box>
       </Box>
     </Box>
   );
 };
 
-const FeaturesSection = (props: HomePage) => {
+const FeaturesSection = () => {
   return (
     <Box
       sx={{
@@ -286,7 +284,7 @@ const FeaturesSection = (props: HomePage) => {
         '& > div:not(:last-of-type)': { mb: { _: 10, lg: 23.5 } },
       }}
     >
-      {props.features_sections.map(({ id, value }, index) => (
+      {cmsData.features_sections.map(({ id, value }, index) => (
         <FeatureBlock key={id} feature={value} index={index} />
       ))}
     </Box>
@@ -336,70 +334,65 @@ const UpboundItems = ({ section_3_card_items }: { section_3_card_items: UpboundI
   );
 };
 
-type Props = {
-  isPreview?: boolean;
-} & HomePage;
-
-const Home = (props: Props) => {
+const Home = () => {
   return (
     <PageProvider
-      cms_head_props={props.cms_head_props}
-      isPreview={props.isPreview}
-      ctaTitle={props.cta_section_title}
-      ctaParagraph={props.cta_section_text}
+      cms_head_props={cmsData.cms_head_props}
+      ctaTitle={cmsData.cta_section_title}
+      ctaParagraph={cmsData.cta_section_text}
       ctaBtnText={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[0] &&
-        props.cta_section_buttons[0].value?.text
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[0] &&
+        cmsData.cta_section_buttons[0].value?.text
       }
       ctaBtnLink={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[0] &&
-        props.cta_section_buttons[0].value?.link
-          ? props.cta_section_buttons[0].value.link[0].value
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[0] &&
+        cmsData.cta_section_buttons[0].value?.link
+          ? cmsData.cta_section_buttons[0].value.link[0].value
           : undefined
       }
       ctaBtnStyleType={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[0] &&
-        props.cta_section_buttons[0].value?.style_type
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[0] &&
+        cmsData.cta_section_buttons[0].value?.style_type
       }
       ctaBtnTarget={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[0] &&
-        props.cta_section_buttons[0].value?.link &&
-        props.cta_section_buttons[0].value.link[0].type === 'external_url'
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[0] &&
+        cmsData.cta_section_buttons[0].value?.link &&
+        cmsData.cta_section_buttons[0].value.link[0].type === 'external_url'
           ? '_blank'
           : '_self'
       }
       ctaBtnTwoText={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[1] &&
-        props.cta_section_buttons[1].value?.text
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[1] &&
+        cmsData.cta_section_buttons[1].value?.text
       }
       ctaBtnTwoLink={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[1] &&
-        props.cta_section_buttons[1].value?.link
-          ? props.cta_section_buttons[1].value.link[0].value
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[1] &&
+        cmsData.cta_section_buttons[1].value?.link
+          ? cmsData.cta_section_buttons[1].value.link[0].value
           : undefined
       }
       ctaBtnTwoTarget={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[1] &&
-        props.cta_section_buttons[1].value?.link &&
-        props.cta_section_buttons[1].value.link[0].type === 'external_url'
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[1] &&
+        cmsData.cta_section_buttons[1].value?.link &&
+        cmsData.cta_section_buttons[1].value.link[0].type === 'external_url'
           ? '_blank'
           : '_self'
       }
       ctaBtnTwoStyleType={
-        props.cta_section_buttons &&
-        props.cta_section_buttons[1] &&
-        props.cta_section_buttons[1].value?.style_type
+        cmsData.cta_section_buttons &&
+        cmsData.cta_section_buttons[1] &&
+        cmsData.cta_section_buttons[1].value?.style_type
       }
     >
       <Section sx={headerSection}>
-        <HeaderSection {...props.header[0].value} />
+        <HeaderSection {...cmsData.header[0].value} />
       </Section>
 
       <Section
@@ -411,9 +404,9 @@ const Home = (props: Props) => {
       >
         <Box sx={{ maxWidth: 950, mx: 'auto', pb: { _: 13, md: 16 }, textAlign: 'center' }}>
           <Typography variant="h2" sx={{ mb: 2.5 }}>
-            {props.section_1_title}
+            {cmsData.section_1_title}
           </Typography>
-          <Typography variant="body_normal">{props.section_1_sub_title}</Typography>
+          <Typography variant="body_normal">{cmsData.section_1_sub_title}</Typography>
           <Box sx={{ maxWidth: 269, mx: 'auto', my: 3 }}>
             <Image
               src={createdBy}
@@ -422,17 +415,17 @@ const Home = (props: Props) => {
               style={{ width: '100%', height: 'auto' }}
             />
           </Box>
-          {props.section_1_button[0] && (
+          {cmsData.section_1_button[0] && (
             <Button
-              cmsValue={props.section_1_button[0].value}
-              styleType={props.section_1_button[0].value?.style_type}
+              cmsValue={cmsData.section_1_button[0].value}
+              styleType={cmsData.section_1_button[0].value?.style_type}
             >
-              {props.section_1_button[0].value.text}
+              {cmsData.section_1_button[0].value.text}
             </Button>
           )}
         </Box>
 
-        <CrossplaneLogosSection {...props} />
+        <CrossplaneLogosSection {...cmsData} />
 
         <Box sx={{ py: { _: 10, md: 16 } }}>
           <Image
@@ -449,10 +442,10 @@ const Home = (props: Props) => {
             position: 'relative',
           }}
         >
-          <FeaturesSection {...props} />
+          <FeaturesSection />
         </Box>
         <Typography variant="h2" textAlign="center">
-          {props.section_3_title}
+          {cmsData.section_3_title}
         </Typography>
         <Box sx={{ maxWidth: 950, mx: 'auto', textAlign: 'center' }}>
           <Box sx={{ maxWidth: 306.89, mx: 'auto', my: 4 }}>
@@ -463,14 +456,14 @@ const Home = (props: Props) => {
               style={{ width: '100%', height: 'auto' }}
             />
           </Box>
-          <Typography variant="body_normal">{props.section_3_text}</Typography>
+          <Typography variant="body_normal">{cmsData.section_3_text}</Typography>
         </Box>
         <Box>
-          <UpboundItems section_3_card_items={props.section_3_card_items} />
+          <UpboundItems section_3_card_items={cmsData.section_3_card_items} />
           <Box textAlign="center">
-            {props.section_3_button[0] && (
-              <Button sx={{ mt: 6 }} cmsValue={props.section_3_button[0].value}>
-                {props.section_3_button[0].value.text}
+            {cmsData.section_3_button[0] && (
+              <Button sx={{ mt: 6 }} cmsValue={cmsData.section_3_button[0].value}>
+                {cmsData.section_3_button[0].value.text}
               </Button>
             )}
           </Box>
@@ -489,17 +482,3 @@ const Home = (props: Props) => {
 };
 
 export default Home;
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const returnValue = await handleGetStaticProps(context, '/');
-
-  if (returnValue) {
-    return {
-      props: returnValue,
-    };
-  } else {
-    return {
-      notFound: true,
-    };
-  }
-};

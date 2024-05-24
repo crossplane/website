@@ -1,12 +1,9 @@
 import React from 'react';
 
 import Image from 'next/future/image';
-import { GetStaticProps } from 'next';
 
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, fontAvenirBold, MQ } from 'src/theme';
-
-import getNewsBannerData from 'src/utils/getNewsBannerData';
 
 import * as routes from 'src/routes';
 
@@ -267,13 +264,3 @@ const Why = ({}: Props) => {
 };
 
 export default Why;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const newsBannerData = await getNewsBannerData();
-
-  return {
-    props: {
-      newsBannerData,
-    },
-  };
-};

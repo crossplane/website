@@ -5,8 +5,6 @@ import Image from 'next/future/image';
 import { Box, Typography, SxProps } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
 
-import useNewsBanner from 'src/context/newsBannerContext';
-
 // import Link from 'src/elements/Link';
 import Button from 'src/elements/Button';
 
@@ -32,16 +30,17 @@ type NewsBannerProps = {
   setNewsBannerHeight: React.Dispatch<React.SetStateAction<number>>;
   newsBannerClosed?: boolean;
   setNewsBannerClosed: React.Dispatch<React.SetStateAction<boolean>>;
+  data: NewsBanner;
 };
 
 const NewsBanner = ({
   setNewsBannerHeight,
   newsBannerClosed,
   setNewsBannerClosed,
+  data,
 }: NewsBannerProps) => {
   const newsBannerRef = useRef<HTMLDivElement | null>(null);
-  const { newsBannerData } = useNewsBanner();
-  const { banner_id, text, button } = newsBannerData;
+  const { banner_id, text, button } = data;
 
   const handleClick = () => {
     // When the close button is clicked, set the flag in local storage to hide the NewsBanner.

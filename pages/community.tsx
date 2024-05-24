@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Image from 'next/future/image';
-import { GetStaticProps } from 'next';
 
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
@@ -19,7 +18,6 @@ import vshnLogo from 'public/vshn-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
-import getNewsBannerData from 'src/utils/getNewsBannerData';
 
 const headerSection: SxProps = {
   position: 'relative',
@@ -81,9 +79,7 @@ const btnContainer: SxProps = {
   },
 };
 
-type Props = {};
-
-const Why = ({}: Props) => {
+const Why = () => {
   return (
     <PageProvider ctaBtnTarget="_blank">
       <Section sx={headerSection}>
@@ -260,13 +256,3 @@ const Why = ({}: Props) => {
 };
 
 export default Why;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const newsBannerData = await getNewsBannerData();
-
-  return {
-    props: {
-      newsBannerData,
-    },
-  };
-};

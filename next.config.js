@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const API_HOST_DOMAIN = process.env.API_HOST?.replace('https://', '') || '';
-
 const nextConfig = {
   reactStrictMode: true,
   async redirects() {
@@ -10,19 +8,16 @@ const nextConfig = {
         source: '/docs/:path*',
         destination: 'https://docs.crossplane.io/:path*',
         permanent: true,
-      }
+      },
     ];
   },
   async rewrites() {
-    return [
-    ];
+    return [];
   },
   images: {
-    domains: ['i.ytimg.com', 'localhost', API_HOST_DOMAIN],
+    domains: ['i.ytimg.com', 'localhost'],
   },
-  env: {
-    apiHost: process.env.API_HOST,
-  },
+  env: {},
 };
 
 module.exports = nextConfig;

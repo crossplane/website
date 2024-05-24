@@ -1,11 +1,7 @@
 import React from 'react';
 
-import { GetStaticProps } from 'next';
-
 import { Box, SxProps, Typography, styled } from '@mui/material';
 import { COLORS, fontAvenirRoman, fontAvenirBold } from 'src/theme';
-
-import getNewsBannerData from 'src/utils/getNewsBannerData';
 
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
@@ -94,9 +90,7 @@ const paragraphSpacingLg: SxProps = {
   lineHeight: '25px',
 };
 
-type Props = {};
-
-const PrivacyPolicy = ({}: Props) => {
+const PrivacyPolicy = () => {
   return (
     <PageProvider ctaBtnTarget="_blank">
       <Section sx={headerSection}>
@@ -515,13 +509,3 @@ const PrivacyPolicy = ({}: Props) => {
 };
 
 export default PrivacyPolicy;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const newsBannerData = await getNewsBannerData();
-
-  return {
-    props: {
-      newsBannerData,
-    },
-  };
-};
