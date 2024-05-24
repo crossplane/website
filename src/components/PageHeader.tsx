@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import Image from 'next/future/image';
 import { COLORS, MQ, fontAvenirRoman, fontAvenirBold } from 'src/theme';
 
-import useNewsBanner from 'src/context/newsBannerContext';
-
 import { AppBar, Drawer, IconButton, Toolbar, Box, SxProps, useMediaQuery } from '@mui/material';
 
 import * as routes from 'src/routes';
@@ -19,6 +17,7 @@ import githubStar from 'public/github-star.svg';
 import logo from 'public/crossplane-logo.svg';
 import closeIcon from 'public/icons/close-icon.svg';
 import hamburgerIcon from 'public/icons/hamburger-white.svg';
+import { newsBannerData } from 'src/static-cms';
 
 const root: SxProps = {
   position: 'relative',
@@ -119,7 +118,6 @@ const navItems = [
 
 const PageHeader = () => {
   const matchesXXL = useMediaQuery(MQ.xxl);
-  const { newsBannerData } = useNewsBanner();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [newsBannerClosed, setNewsBannerClosed] = useState(true);
   const [newsBannerHeight, setNewsBannerHeight] = useState<number>(0);
@@ -221,6 +219,7 @@ const PageHeader = () => {
           newsBannerClosed={newsBannerClosed}
           setNewsBannerClosed={setNewsBannerClosed}
           setNewsBannerHeight={setNewsBannerHeight}
+          data={newsBannerData}
         />
       )}
 

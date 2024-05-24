@@ -7,7 +7,6 @@ import { COLORS } from 'src/theme';
 import PageHeader from 'src/components/PageHeader';
 import PageFooter from 'src/components/PageFooter';
 import PageHead from 'src/components/PageHead';
-import PreviewIndicator from 'src/components/PreviewIndicator';
 
 import OGImgHome from 'public/og-images/crossplane-og.jpg';
 
@@ -36,7 +35,6 @@ type Props = {
   ctaBtnTwoStyleType?: ButtonStyleType;
   // ctaCustomSx?: SxProps;
   cms_head_props?: CMSHeadProps;
-  isPreview?: boolean;
 };
 
 const PageProvider = ({
@@ -58,7 +56,6 @@ const PageProvider = ({
   ctaBtnTwoStyleType,
   // ctaCustomSx,
   cms_head_props,
-  isPreview,
 }: Props) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -99,7 +96,6 @@ const PageProvider = ({
           // ctaCustomSx={ctaCustomSx}
         />
       </Box>
-      {isPreview && <PreviewIndicator />}
     </Box>
   );
 };
