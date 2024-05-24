@@ -1,4 +1,7 @@
-export const newsBannerData: NewsBanner | undefined = {
+export const newsBannerData: NewsBanner | undefined = undefined;
+/* commenting out the news banner while it is not being used, it can be added back by removing the comment
+   block and removing the assignment to undefined just above.
+{
   text:
     'New event! Level Up with Crossplane, presented by Upbound, goes deeper with Crossplane 1.15, compositions, ' +
     'testing patterns, and more.',
@@ -22,7 +25,7 @@ export const newsBannerData: NewsBanner | undefined = {
     },
   ],
   banner_id: '1-5',
-};
+}; */
 
 export const indexData: HomePage = {
   header: [
