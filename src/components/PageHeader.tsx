@@ -100,9 +100,9 @@ const navItems = [
     target: '_blank',
   },
   {
-    href: routes.upboundMarketUrl,
-    text: 'Marketplace',
-    target: '_blank',
+    href: '/registries',
+    text: 'Registries',
+    target: '_self',
   },
   {
     href: '/community',
