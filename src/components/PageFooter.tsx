@@ -228,9 +228,9 @@ Props) => {
                 .
               </Typography>
               <Typography fontWeight={600}>
-                © {getCurrentYear()} The Linux Foundation. All rights reserved. The Linux Foundation has
-                registered trademarks and uses trademarks. For a list of trademarks of The Linux
-                Foundation, please see our{' '}
+                © {getCurrentYear()} The Linux Foundation. All rights reserved. The Linux
+                Foundation has registered trademarks and uses trademarks. For a list of trademarks
+                of The Linux Foundation, please see our{' '}
                 <Link
                   href={routes.trademarkUsageUrl}
                   muiProps={{ color: COLORS.turquoise, target: '_blank' }}

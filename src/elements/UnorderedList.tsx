@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { styled } from '@mui/system';
 
-import { COLORS, fontAvenirBold, fontAvenirRoman, shouldForwardProp } from 'src/theme';
+import { fontAvenirBold, fontAvenirRoman, shouldForwardProp } from 'src/theme';
 
 const baseStyle = (isBold: boolean) => css`
   ${isBold ? fontAvenirBold : fontAvenirRoman};
@@ -16,7 +16,7 @@ interface UnorderedListProps {
   bold?: boolean;
 }
 
-export const UnorderedList = styled('ul', { shouldForwardProp }) <UnorderedListProps>`
+export const UnorderedList = styled('ul', { shouldForwardProp })<UnorderedListProps>`
   ${(props) => baseStyle(props.bold || false)}
 `;
 

@@ -6,7 +6,7 @@ import GitHubButton from 'react-github-btn';
 import Image from 'next/future/image';
 
 import { Box, SxProps, Typography } from '@mui/material';
-import { COLORS, fontAvenirBold, MQ } from 'src/theme';
+import { COLORS, MQ } from 'src/theme';
 
 import * as routes from 'src/routes';
 
@@ -15,13 +15,11 @@ import Section from 'src/components/Section';
 import CrossplaneLogosSection from 'src/components/CrossplaneLogosSection';
 import Button from 'src/elements/Button';
 import Link from 'src/elements/Link';
-import CMSImage from 'src/elements/CMSImage';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SlackIcon from 'src/svg/SlackIcon';
 import iceCreamIcon from 'public/icecream-icon.svg';
 import createdBy from 'public/created-by-upbound.svg';
-import upboundMarketplace from 'public/upbound-marketplace.svg';
 import gradientGraphic from 'public/background-graphics/gradient-graphic.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
 import truckAnim from 'public/animations/truck.json';
@@ -74,46 +72,6 @@ const socialLinksStyles: SxProps = {
     fontSize: '17px',
     mb: 0,
   },
-};
-
-const gridLayout: SxProps = {
-  display: 'grid',
-  gap: 4,
-  gridTemplateColumns: 'repeat(1, 1fr)',
-
-  [MQ.md]: {
-    gridTemplateColumns: 'repeat(3, 1fr)',
-  },
-};
-
-const cardStyles: SxProps = {
-  backgroundColor: '#fff',
-  borderRadius: '20px',
-  boxShadow: '1px 0px 16px 2px rgba(215,215,215,0.5)',
-  p: 4,
-
-  flex: '1 0 0%',
-  display: 'flex',
-  flexDirection: 'column',
-
-  '& > a': {
-    display: 'flex',
-    flexDirection: 'column',
-    flex: '1 0 0%',
-  },
-};
-
-const providerIcon: SxProps = {
-  backgroundColor: '#DCE7F2',
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
-  width: '100%',
-  height: '90px',
-  maxWidth: '90px',
-  borderRadius: '20px',
-  overflow: 'hidden',
-  p: 2,
 };
 
 const HeaderSection = (props: HomePageHeader) => {
@@ -304,8 +262,8 @@ const Home = () => {
       }
       ctaBtnLink={
         cmsData.cta_section_buttons &&
-          cmsData.cta_section_buttons[0] &&
-          cmsData.cta_section_buttons[0].value?.link
+        cmsData.cta_section_buttons[0] &&
+        cmsData.cta_section_buttons[0].value?.link
           ? cmsData.cta_section_buttons[0].value.link[0].value
           : undefined
       }
@@ -316,9 +274,9 @@ const Home = () => {
       }
       ctaBtnTarget={
         cmsData.cta_section_buttons &&
-          cmsData.cta_section_buttons[0] &&
-          cmsData.cta_section_buttons[0].value?.link &&
-          cmsData.cta_section_buttons[0].value.link[0].type === 'external_url'
+        cmsData.cta_section_buttons[0] &&
+        cmsData.cta_section_buttons[0].value?.link &&
+        cmsData.cta_section_buttons[0].value.link[0].type === 'external_url'
           ? '_blank'
           : '_self'
       }
@@ -329,16 +287,16 @@ const Home = () => {
       }
       ctaBtnTwoLink={
         cmsData.cta_section_buttons &&
-          cmsData.cta_section_buttons[1] &&
-          cmsData.cta_section_buttons[1].value?.link
+        cmsData.cta_section_buttons[1] &&
+        cmsData.cta_section_buttons[1].value?.link
           ? cmsData.cta_section_buttons[1].value.link[0].value
           : undefined
       }
       ctaBtnTwoTarget={
         cmsData.cta_section_buttons &&
-          cmsData.cta_section_buttons[1] &&
-          cmsData.cta_section_buttons[1].value?.link &&
-          cmsData.cta_section_buttons[1].value.link[0].type === 'external_url'
+        cmsData.cta_section_buttons[1] &&
+        cmsData.cta_section_buttons[1].value?.link &&
+        cmsData.cta_section_buttons[1].value.link[0].type === 'external_url'
           ? '_blank'
           : '_self'
       }
@@ -405,11 +363,11 @@ const Home = () => {
           All things Crossplane. All in one place.
         </Typography>
         <Box sx={{ maxWidth: 950, mx: 'auto', textAlign: 'center' }}>
-          <Typography sx={{ maxWidth: 'md', mx: 'auto', my: 4 }} variant="body_normal">View all the public registries to find Crossplane providers, functions, configurations and more.</Typography>
-          <Button
-            href="/registries"
-            styleType="turquoiseContained"
-          >
+          <Typography sx={{ maxWidth: 'md', mx: 'auto', my: 4 }} variant="body_normal">
+            View all the public registries to find Crossplane providers, functions, configurations
+            and more.
+          </Typography>
+          <Button href="/registries" styleType="turquoiseContained">
             View Registries
           </Button>
         </Box>

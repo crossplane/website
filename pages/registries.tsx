@@ -11,7 +11,7 @@ import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import Link from 'src/elements/Link';
 import Button from 'src/elements/Button';
-import UnorderedList from 'src/elements/UnorderedList'
+import UnorderedList from 'src/elements/UnorderedList';
 
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
@@ -86,8 +86,8 @@ const Why = () => {
           Public Crossplane Package Registries
         </Typography>
         <Typography variant="body_normal" textAlign="center" color="#fff">
-          Check out the public registries below to find Crossplane providers, functions, configurations
-          and more.
+          Check out the public registries below to find Crossplane providers, functions,
+          configurations and more.
         </Typography>
         <Box sx={{ maxWidth: 476, mx: 'auto', mt: 6 }}>
           <Image
@@ -115,7 +115,9 @@ const Why = () => {
                 mb: 2,
               }}
             >
-              The Upbound Marketplace is the one-stop shop for all things Crossplane — finding, understanding, and consuming Crossplane providers, functions and configurations is easy.
+              The Upbound Marketplace is the one-stop shop for all things Crossplane — finding,
+              understanding, and consuming Crossplane providers, functions and configurations is
+              easy.
             </Typography>
             <Box sx={btnContainer}>
               <Button styleType="turquoiseContained" href={routes.upboundMarketUrl} target="_blank">
@@ -135,30 +137,38 @@ const Why = () => {
       >
         <Box
           sx={{
-            textAlign: 'center'
+            textAlign: 'center',
           }}
         >
-
           <Typography variant="body_normal" sx={{ whiteSpace: 'break-spaces' }}>
-            We welcome <Link href={"https://github.com/crossplane/website"}
+            We welcome{' '}
+            <Link
+              href={'https://github.com/crossplane/website'}
               muiProps={{
                 target: '_blank',
                 fontWeight: 700,
                 underline: 'always',
                 color: COLORS.turquoise,
-              }}>PRs</Link> to add new registries that meet the following criteria:
+              }}
+            >
+              PRs
+            </Link>{' '}
+            to add new registries that meet the following criteria:
           </Typography>
           <Container maxWidth="md">
             <Box
               sx={{
                 ml: 6,
-                mr: 6
+                mr: 6,
               }}
             >
               <UnorderedList>
                 <li>Understands the xpkg format of Crossplane extensions</li>
                 <li>Are publicly accessible with publicly viewable repositories</li>
-                <li>Offers Crossplane extensions (packages) that can be downloaded and installed by the community</li>
+                <li>
+                  Offers Crossplane extensions (packages) that can be downloaded and installed by
+                  the community
+                </li>
               </UnorderedList>
             </Box>
           </Container>
