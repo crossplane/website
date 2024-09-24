@@ -291,49 +291,6 @@ const FeaturesSection = () => {
   );
 };
 
-const UpboundItem = ({ upboundItem }: { upboundItem: UpboundItem }) => {
-  const { image, title, text, footer_text } = upboundItem;
-
-  return (
-    <Box sx={cardStyles}>
-      <Box>
-        <Box sx={providerIcon}>
-          {image && image[0] && <CMSImage value={image[0].value} objectFit="cover" />}
-        </Box>
-      </Box>
-      <Box sx={{ flex: '1 1 auto', mt: 3 }}>
-        <Typography
-          variant="body_normal"
-          sx={{
-            mb: 2,
-            ...fontAvenirBold,
-          }}
-        >
-          {title}
-        </Typography>
-        <Typography variant="body_small" sx={{ mb: 2 }}>
-          {text}
-        </Typography>
-      </Box>
-      <Box>
-        <Typography variant="body_small" sx={{ color: COLORS.blueBayoux }}>
-          {footer_text}
-        </Typography>
-      </Box>
-    </Box>
-  );
-};
-
-const UpboundItems = ({ section_3_card_items }: { section_3_card_items: UpboundItems }) => {
-  return (
-    <Box sx={{ mt: 8, ...gridLayout }}>
-      {section_3_card_items.map((item) => (
-        <UpboundItem key={item.id} upboundItem={item} />
-      ))}
-    </Box>
-  );
-};
-
 const Home = () => {
   return (
     <PageProvider
@@ -347,8 +304,8 @@ const Home = () => {
       }
       ctaBtnLink={
         cmsData.cta_section_buttons &&
-        cmsData.cta_section_buttons[0] &&
-        cmsData.cta_section_buttons[0].value?.link
+          cmsData.cta_section_buttons[0] &&
+          cmsData.cta_section_buttons[0].value?.link
           ? cmsData.cta_section_buttons[0].value.link[0].value
           : undefined
       }
@@ -359,9 +316,9 @@ const Home = () => {
       }
       ctaBtnTarget={
         cmsData.cta_section_buttons &&
-        cmsData.cta_section_buttons[0] &&
-        cmsData.cta_section_buttons[0].value?.link &&
-        cmsData.cta_section_buttons[0].value.link[0].type === 'external_url'
+          cmsData.cta_section_buttons[0] &&
+          cmsData.cta_section_buttons[0].value?.link &&
+          cmsData.cta_section_buttons[0].value.link[0].type === 'external_url'
           ? '_blank'
           : '_self'
       }
@@ -372,16 +329,16 @@ const Home = () => {
       }
       ctaBtnTwoLink={
         cmsData.cta_section_buttons &&
-        cmsData.cta_section_buttons[1] &&
-        cmsData.cta_section_buttons[1].value?.link
+          cmsData.cta_section_buttons[1] &&
+          cmsData.cta_section_buttons[1].value?.link
           ? cmsData.cta_section_buttons[1].value.link[0].value
           : undefined
       }
       ctaBtnTwoTarget={
         cmsData.cta_section_buttons &&
-        cmsData.cta_section_buttons[1] &&
-        cmsData.cta_section_buttons[1].value?.link &&
-        cmsData.cta_section_buttons[1].value.link[0].type === 'external_url'
+          cmsData.cta_section_buttons[1] &&
+          cmsData.cta_section_buttons[1].value?.link &&
+          cmsData.cta_section_buttons[1].value.link[0].type === 'external_url'
           ? '_blank'
           : '_self'
       }
@@ -445,29 +402,18 @@ const Home = () => {
           <FeaturesSection />
         </Box>
         <Typography variant="h2" textAlign="center">
-          {cmsData.section_3_title}
+          All things Crossplane. All in one place.
         </Typography>
         <Box sx={{ maxWidth: 950, mx: 'auto', textAlign: 'center' }}>
-          <Box sx={{ maxWidth: 306.89, mx: 'auto', my: 4 }}>
-            <Image
-              src={upboundMarketplace}
-              alt="upboundMarketplace"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          </Box>
-          <Typography variant="body_normal">{cmsData.section_3_text}</Typography>
+          <Typography sx={{ maxWidth: 'md', mx: 'auto', my: 4 }} variant="body_normal">View all the public registries to find Crossplane providers, functions, configurations and more.</Typography>
+          <Button
+            href="/registries"
+            styleType="turquoiseContained"
+          >
+            View Registries
+          </Button>
         </Box>
-        <Box>
-          <UpboundItems section_3_card_items={cmsData.section_3_card_items} />
-          <Box textAlign="center">
-            {cmsData.section_3_button[0] && (
-              <Button sx={{ mt: 6 }} cmsValue={cmsData.section_3_button[0].value}>
-                {cmsData.section_3_button[0].value.text}
-              </Button>
-            )}
-          </Box>
-        </Box>
+
         <Box sx={{ maxWidth: 476, mx: 'auto', pt: 16 }}>
           <Image
             src={gradientGraphicSM}
