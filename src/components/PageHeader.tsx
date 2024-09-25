@@ -105,8 +105,8 @@ const navItems = [
     target: '_self',
   },
   {
-    href: '/community',
-    text: 'Community',
+    href: '/commercial',
+    text: 'Commercial',
     target: '_self',
   },
   {

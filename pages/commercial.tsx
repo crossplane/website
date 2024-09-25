@@ -87,15 +87,11 @@ const Why = () => {
           Companies with Commercial Crossplane Offerings
         </Typography>
         <Typography variant="body_normal" textAlign="center" color="#fff">
-          Check out the Upbound Marketplace to find Crossplane providers, listings, configurations
-          and more.{' '}
-          <Link
-            href={routes.upboundMarketUrl}
-            muiProps={{ color: COLORS.turquoise, fontWeight: 600, target: '_blank' }}
-          >
-            Head to the marketplace
-          </Link>
-          .
+          Check out the{' '}
+          <Link href="/registries" muiProps={{ color: COLORS.turquoise, fontWeight: 600 }}>
+            registries
+          </Link>{' '}
+          to find Crossplane providers, listings, configurations and more.
         </Typography>
         <Box sx={{ maxWidth: 476, mx: 'auto', mt: 6 }}>
           <Image
