@@ -91,7 +91,7 @@ const Why = () => {
           <Link href="/registries" muiProps={{ color: COLORS.turquoise, fontWeight: 600 }}>
             registries
           </Link>{' '}
-          to find Crossplane providers, listings, configurations and more.
+          page to find Crossplane providers, listings, configurations and more.
         </Typography>
         <Box sx={{ maxWidth: 476, mx: 'auto', mt: 6 }}>
           <Image
@@ -130,7 +130,7 @@ const Why = () => {
               <Button
                 styleType="darkOutlined"
                 startIcon={<GitHubIcon />}
-                href={routes.githubUrl}
+                href="https://github.com/upbound/"
                 target="_blank"
               >
                 GitHub

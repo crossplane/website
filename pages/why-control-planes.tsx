@@ -235,7 +235,7 @@ const Why = ({}: Props) => {
         </Box>
         <Box sx={{ maxWidth: 950, textAlign: 'center', mx: 'auto', pt: { _: 16, md: 23.5 } }}>
           <Typography variant="h2" sx={{ mb: 5 }}>
-            Where open-source meets enterprise
+            Crossplane was originally created by Upbound
           </Typography>
           <Typography variant="body_normal" sx={{ mb: 4 }}>
             Upbound helps you build, deploy, and manage your internal cloud platforms using control

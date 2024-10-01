@@ -163,7 +163,24 @@ const Why = () => {
               }}
             >
               <UnorderedList>
-                <li>Understands the xpkg format of Crossplane extensions</li>
+                <li>
+                  Understands the{' '}
+                  <Link
+                    href={
+                      'https://github.com/crossplane/crossplane/blob/main/contributing/specifications/xpkg.md'
+                    }
+                    muiProps={{
+                      target: '_blank',
+                      fontWeight: 700,
+                      underline: 'always',
+                      color: COLORS.turquoise,
+                    }}
+                  >
+                    xpkg format
+                  </Link>{' '}
+                  of Crossplane extensions and provides a differentiated experience for its users
+                  that is specific to Crossplane
+                </li>
                 <li>Are publicly accessible with publicly viewable repositories</li>
                 <li>
                   Offers Crossplane extensions (packages) that can be downloaded and installed by
