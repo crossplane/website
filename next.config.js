@@ -9,6 +9,11 @@ const nextConfig = {
         destination: 'https://docs.crossplane.io/:path*',
         permanent: true,
       },
+      {
+        source: '/community',
+        destination: '/commercial',
+        permanent: true,
+      }
     ];
   },
   async rewrites() {

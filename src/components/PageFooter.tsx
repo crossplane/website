@@ -81,6 +81,10 @@ type Props = {
   // ctaCustomSx?: SxProps;
 };
 
+const getCurrentYear = () => {
+  return new Date().getUTCFullYear();
+};
+
 const PageFooter = ({
   isFooterVisible = true,
   hideCTACard,
@@ -214,7 +218,7 @@ Props) => {
               }}
             >
               <Typography fontWeight={600} sx={{ mb: 2 }}>
-                © Crossplane Authors 2023. Documentation distributed under{' '}
+                © Crossplane Authors {getCurrentYear()}. Documentation distributed under{' '}
                 <Link
                   href={routes.creativeCommonsUrl}
                   muiProps={{ color: COLORS.turquoise, target: '_blank' }}
@@ -224,9 +228,9 @@ Props) => {
                 .
               </Typography>
               <Typography fontWeight={600}>
-                © 2023 The Linux Foundation. All rights reserved. The Linux Foundation has
-                registered trademarks and uses trademarks. For a list of trademarks of The Linux
-                Foundation, please see our{' '}
+                © {getCurrentYear()} The Linux Foundation. All rights reserved. The Linux
+                Foundation has registered trademarks and uses trademarks. For a list of trademarks
+                of The Linux Foundation, please see our{' '}
                 <Link
                   href={routes.trademarkUsageUrl}
                   muiProps={{ color: COLORS.turquoise, target: '_blank' }}

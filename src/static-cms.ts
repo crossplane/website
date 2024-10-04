@@ -94,7 +94,7 @@ export const indexData: HomePage = {
       id: '61e05ad8-8f8d-4c24-86ee-eb3fa74f7a3b',
     },
   ],
-  section_1_slack_title_count: '10,000',
+  section_1_slack_title_count: '12,000+',
   section_1_slack_title: 'Slack Members',
   section_1_slack_text: 'Adopted by hundreds of amazing companies',
   section_1_slack_button: [

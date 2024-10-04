@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from 'next/future/image';
 
-import { Box, SxProps, Typography } from '@mui/material';
+import { Box, Container, SxProps, Typography } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
 
 import * as routes from 'src/routes';
@@ -11,13 +11,12 @@ import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import Link from 'src/elements/Link';
 import Button from 'src/elements/Button';
+import UnorderedList from 'src/elements/UnorderedList';
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import upboundLogo from 'public/upbound-logo.svg';
-import vshnLogo from 'public/vshn-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
+import upboundMarketplace from 'public/upbound-marketplace.svg';
 
 const headerSection: SxProps = {
   position: 'relative',
@@ -84,18 +83,11 @@ const Why = () => {
     <PageProvider ctaBtnTarget="_blank">
       <Section sx={headerSection}>
         <Typography variant="h2" textAlign="center" color="#fff" sx={{ mb: 5 }}>
-          Companies with Commercial Crossplane Offerings
+          Public Crossplane Package Registries
         </Typography>
         <Typography variant="body_normal" textAlign="center" color="#fff">
-          Check out the Upbound Marketplace to find Crossplane providers, listings, configurations
-          and more.{' '}
-          <Link
-            href={routes.upboundMarketUrl}
-            muiProps={{ color: COLORS.turquoise, fontWeight: 600, target: '_blank' }}
-          >
-            Head to the marketplace
-          </Link>
-          .
+          Check out the public registries below to find Crossplane providers, functions,
+          configurations and more.
         </Typography>
         <Box sx={{ maxWidth: 476, mx: 'auto', mt: 6 }}>
           <Image
@@ -109,8 +101,8 @@ const Why = () => {
           <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
             <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
               <Image
-                src={upboundLogo}
-                alt="upbound logo"
+                src={upboundMarketplace}
+                alt="upboundMarketplace"
                 sizes="100vw"
                 style={{ width: '100%', height: 'auto' }}
               />
@@ -123,21 +115,13 @@ const Why = () => {
                 mb: 2,
               }}
             >
-              Upbound is the creator of open source Crossplane. With security, support, and official
-              providers, Upbound’s platform gives you everything you need to scale Crossplane and
-              manage all your infrastructure in one place.
+              The Upbound Marketplace is the one-stop shop for all things Crossplane — finding,
+              understanding, and consuming Crossplane providers, functions and configurations is
+              easy.
             </Typography>
             <Box sx={btnContainer}>
-              <Button styleType="turquoiseContained" href={routes.upboundUrl} target="_blank">
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href={routes.githubUrl}
-                target="_blank"
-              >
-                GitHub
+              <Button styleType="turquoiseContained" href={routes.upboundMarketUrl} target="_blank">
+                Visit
               </Button>
             </Box>
           </Box>
@@ -151,78 +135,75 @@ const Why = () => {
           backgroundColor: '#fff',
         }}
       >
-        <Box sx={cardStyles}>
-          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
-            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
-              <Image
-                src={vshnLogo}
-                alt="vshn logo"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Box>
-          </Box>
-          <Box sx={{ width: { _: '100%', md: '50%' } }}>
-            <Typography
-              variant="body_normal"
-              sx={{
-                mb: 2,
-              }}
-            >
-              VSHN, a seasoned adopter of Crossplane in live environments, brings a wealth of daily
-              usage expertise to your Crossplane project. With our extensive experience, rest
-              assured that your Crossplane deployment is in capable hands.
-            </Typography>
-            <Box sx={btnContainer}>
-              <Button
-                styleType="turquoiseContained"
-                href="https://products.vshn.ch/crossplane_support.html"
-                target="_blank"
-              >
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href="https://github.com/vshn/"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Box>
-          </Box>
-        </Box>
         <Box
           sx={{
             textAlign: 'center',
-            pt: { _: 6, md: 10 },
           }}
         >
-          <Box
-            sx={{
-              pb: { _: 6, md: 10 },
-              borderBottom: `1px solid ${COLORS.blueBayoux}`,
-              '& a': {
-                textDecorationColor: COLORS.turquoise,
-              },
-            }}
-          >
-            <Typography variant="body_normal" sx={{ whiteSpace: 'break-spaces' }}>
-              Building on top of Crossplane or offering support? {'\n'}
-              <Link
-                href="mailto:info@crossplane.io"
-                muiProps={{
-                  target: '_blank',
-                  fontWeight: 700,
-                  underline: 'always',
-                  color: COLORS.turquoise,
-                }}
-              >
-                Let us know
-              </Link>{' '}
-              and we will add your logo to this page.
-            </Typography>
-          </Box>
+          <Typography variant="body_normal" sx={{ whiteSpace: 'break-spaces' }}>
+            We welcome{' '}
+            <Link
+              href={'https://github.com/crossplane/website'}
+              muiProps={{
+                target: '_blank',
+                fontWeight: 700,
+                underline: 'always',
+                color: COLORS.turquoise,
+              }}
+            >
+              PRs
+            </Link>{' '}
+            to add new registries that meet the following criteria:
+          </Typography>
+          <Container maxWidth="md">
+            <Box
+              sx={{
+                ml: 6,
+                mr: 6,
+              }}
+            >
+              <UnorderedList>
+                <li>
+                  Understands the{' '}
+                  <Link
+                    href={
+                      'https://github.com/crossplane/crossplane/blob/main/contributing/specifications/xpkg.md'
+                    }
+                    muiProps={{
+                      target: '_blank',
+                      fontWeight: 700,
+                      underline: 'always',
+                      color: COLORS.turquoise,
+                    }}
+                  >
+                    xpkg format
+                  </Link>{' '}
+                  of Crossplane extensions and provides a differentiated experience for its users
+                  that is specific to Crossplane
+                </li>
+                <li>Are publicly accessible with publicly viewable repositories</li>
+                <li>
+                  Offers Crossplane extensions (packages) that can be downloaded and installed by
+                  the community
+                </li>
+              </UnorderedList>
+            </Box>
+          </Container>
+          <Typography variant="body_normal" sx={{ whiteSpace: 'break-spaces' }}>
+            <Link
+              href="mailto:info@crossplane.io"
+              muiProps={{
+                target: '_blank',
+                fontWeight: 700,
+                underline: 'always',
+                color: COLORS.turquoise,
+              }}
+            >
+              Let us know
+            </Link>{' '}
+            and we can assist you in adding your logo to this page.
+          </Typography>
+
           <Box
             sx={{
               pt: { _: 13, md: 16 },
