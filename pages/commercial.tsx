@@ -15,6 +15,7 @@ import Button from 'src/elements/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import upboundLogo from 'public/upbound-logo.svg';
 import vshnLogo from 'public/vshn-logo.svg';
+import alaudaLogo from 'public/alauda-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
@@ -32,6 +33,7 @@ const cardStyles: SxProps = {
   borderRadius: '20px',
   boxShadow: '1px 0px 16px 2px rgba(215,215,215,0.5)',
   maxWidth: 750,
+  mb: 5,
   mt: 5,
   mx: 'auto',
   p: 5,
@@ -47,7 +49,7 @@ const absoluteCardStyles: SxProps = {
   [MQ.md]: {
     position: 'absolute',
     zIndex: 2,
-    bottom: -150,
+    bottom: -190,
     left: 0,
     right: 0,
   },
@@ -188,6 +190,48 @@ const Why = () => {
             </Box>
           </Box>
         </Box>
+
+        <Box sx={cardStyles}>
+          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
+            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
+              <Image
+                src={alaudaLogo}
+                alt="alauda logo"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Box>
+          <Box sx={{ width: { _: '100%', md: '50%' } }}>
+            <Typography
+              variant="body_normal"
+              sx={{
+                mb: 2,
+              }}
+            >
+              Alauda uses Crossplane to provide application delivery and infrastructure provisioning in production environments.
+              It empowers organizations to streamline application delivery and ensure consistent configurations.
+            </Typography>
+            <Box sx={btnContainer}>
+              <Button
+                styleType="turquoiseContained"
+                href="https://www.alauda.io/community/159726"
+                target="_blank"
+              >
+                Learn More
+              </Button>
+              <Button
+                styleType="darkOutlined"
+                startIcon={<GitHubIcon />}
+                href="https://github.com/alauda"
+                target="_blank"
+              >
+                GitHub
+              </Button>
+            </Box>
+          </Box>
+        </Box>
+
         <Box
           sx={{
             textAlign: 'center',
