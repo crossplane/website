@@ -209,8 +209,9 @@ const Why = () => {
                 mb: 2,
               }}
             >
-              Alauda uses Crossplane to provide application delivery and infrastructure provisioning in production environments.
-              It empowers organizations to streamline application delivery and ensure consistent configurations.
+              Alauda uses Crossplane to provide application delivery and infrastructure provisioning
+              in production environments. It empowers organizations to streamline application
+              delivery and ensure consistent configurations.
             </Typography>
             <Box sx={btnContainer}>
               <Button
