@@ -59,7 +59,7 @@ export const indexData: HomePage = {
               link: [
                 {
                   type: 'external_url',
-                  value: 'https://resources.upbound.io/one-pagers/crossplane-overview',
+                  value: 'https://docs.crossplane.io/latest/concepts/',
                   id: '12294e84-2fc5-47b5-b339-e3765f5ab34b',
                 },
               ],
@@ -244,23 +244,6 @@ export const indexData: HomePage = {
       footer_text: '',
     },
   ],
-  section_3_button: [
-    {
-      value: {
-        text: 'Head to the marketplace',
-        style_type: 'turquoiseContained',
-        link: [
-          {
-            type: 'external_url',
-            value: 'https://marketplace.upbound.io/',
-            id: 'c7ef776d-0a07-40fc-a9c2-764a49fc3a84',
-          },
-        ],
-        has_arrow: false,
-      },
-      id: '2b1d04fa-ac7e-4dc0-95bd-4a74647b3367',
-    },
-  ],
   cta_section_title: 'Crossplane is open source and community driven',
   cta_section_text:
     'Crossplane is an open source control plane framework supported by the cloud-native community. Crossplane has ' +
@@ -289,7 +272,7 @@ export const indexData: HomePage = {
         link: [
           {
             type: 'external_url',
-            value: 'https://resources.upbound.io/one-pagers/crossplane-overview',
+            value: 'https://docs.crossplane.io/latest/concepts/',
             id: '0501eae5-3f2d-4721-ac75-989883ded410',
           },
         ],

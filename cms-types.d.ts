@@ -118,7 +118,6 @@ type HomePage = {
   section_3_title: string;
   section_3_text: string;
   section_3_card_items: UpboundItem[];
-  section_3_button: Button[];
 
   cta_section_title: string;
   cta_section_text: string;
