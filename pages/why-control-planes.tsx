@@ -104,8 +104,8 @@ const HeaderSection = () => {
           expose an API, not just a command-line.
         </Typography>
         <Box sx={headerButtons}>
-          <Button styleType="turquoiseContained" href={routes.upboundMarketUrl} target="_blank">
-            Join the marketplace
+          <Button styleType="turquoiseContained" href="/registries">
+            View Registries
           </Button>
           <Button styleType="whiteOutlined" href={routes.resourcesUrl} target="_blank">
             Learn more
