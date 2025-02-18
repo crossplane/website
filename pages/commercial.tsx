@@ -16,6 +16,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import upboundLogo from 'public/upbound-logo.svg';
 import vshnLogo from 'public/vshn-logo.svg';
 import alaudaLogo from 'public/alauda-logo.svg';
+import infracloudLogo from 'public/infracloud-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
@@ -225,6 +226,48 @@ const Why = () => {
                 styleType="darkOutlined"
                 startIcon={<GitHubIcon />}
                 href="https://github.com/alauda"
+                target="_blank"
+              >
+                GitHub
+              </Button>
+            </Box>
+          </Box>
+        </Box>
+      
+        <Box sx={cardStyles}>
+          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
+            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
+              <Image
+                src={infracloudLogo}
+                alt="InfraCloud logo"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Box>
+          <Box sx={{ width: { _: '100%', md: '50%' } }}>
+            <Typography
+              variant="body_normal"
+              sx={{
+                mb: 2,
+              }}
+            >
+              Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting, implementation,
+              and managed services to simplify your infrastructure management. Focus on innovation, not operations, with their support.
+
+            </Typography>
+            <Box sx={btnContainer}>
+              <Button
+                styleType="turquoiseContained"
+                href="https://www.infracloud.io/crossplane-consulting-support/"
+                target="_blank"
+              >
+                Learn More
+              </Button>
+              <Button
+                styleType="darkOutlined"
+                startIcon={<GitHubIcon />}
+                href="https://github.com/infracloudio"
                 target="_blank"
               >
                 GitHub

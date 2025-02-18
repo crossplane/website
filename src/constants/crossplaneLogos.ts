@@ -71,6 +71,7 @@ import glossier from 'public/home-page/crossplane-logos/glossier-original.svg';
 import goodRx from 'public/home-page/crossplane-logos/good-rx-original.svg';
 import helloFresh from 'public/home-page/crossplane-logos/hello-fresh-original.svg';
 import iheartRadio from 'public/home-page/crossplane-logos/iheart-radio-original.svg';
+import infracloud from 'public/home-page/crossplane-logos/infracloud-original.svg';
 import mandiant from 'public/home-page/crossplane-logos/mandiant-original.svg';
 import maze from 'public/home-page/crossplane-logos/maze-original.svg';
 import morpheus from 'public/home-page/crossplane-logos/morpheus-original.svg';
@@ -162,6 +163,7 @@ const crossplaneLogos = [
   goodRx,
   helloFresh,
   iheartRadio,
+  infracloud,
   mandiant,
   maze,
   morpheus,
