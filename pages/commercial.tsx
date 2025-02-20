@@ -233,7 +233,6 @@ const Why = () => {
             </Box>
           </Box>
         </Box>
-      
         <Box sx={cardStyles}>
           <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
             <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
@@ -252,9 +251,7 @@ const Why = () => {
                 mb: 2,
               }}
             >
-              Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting, implementation,
-              and managed services to simplify your infrastructure management. Focus on innovation, not operations, with their support.
-
+              Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting, implementation, and managed services to simplify your infrastructure management. Focus on innovation, not operations, with their support.
             </Typography>
             <Box sx={btnContainer}>
               <Button
