@@ -251,7 +251,9 @@ const Why = () => {
                 mb: 2,
               }}
             >
-              Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting, implementation, and managed services to simplify your infrastructure management. Focus on innovation, not operations, with their support.
+              Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting,
+              implementation, and managed services to simplify your infrastructure management. Focus
+              on innovation, not operations, with their support.
             </Typography>
             <Box sx={btnContainer}>
               <Button
