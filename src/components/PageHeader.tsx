@@ -100,11 +100,6 @@ const navItems = [
     target: '_blank',
   },
   {
-    href: '/registries',
-    text: 'Registries',
-    target: '_self',
-  },
-  {
     href: '/commercial',
     text: 'Commercial',
     target: '_self',

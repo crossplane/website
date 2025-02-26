@@ -89,13 +89,6 @@ const Why = () => {
         <Typography variant="h2" textAlign="center" color="#fff" sx={{ mb: 5 }}>
           Companies with Commercial Crossplane Offerings
         </Typography>
-        <Typography variant="body_normal" textAlign="center" color="#fff">
-          Check out the{' '}
-          <Link href="/registries" muiProps={{ color: COLORS.turquoise, fontWeight: 600 }}>
-            registries
-          </Link>{' '}
-          page to find Crossplane providers, listings, configurations and more.
-        </Typography>
         <Box sx={{ maxWidth: 476, mx: 'auto', mt: 6 }}>
           <Image
             src={gradientGraphicHeader}
