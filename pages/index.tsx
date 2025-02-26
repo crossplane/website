@@ -359,18 +359,6 @@ const Home = () => {
         >
           <FeaturesSection />
         </Box>
-        <Typography variant="h2" textAlign="center">
-          All things Crossplane. All in one place.
-        </Typography>
-        <Box sx={{ maxWidth: 950, mx: 'auto', textAlign: 'center' }}>
-          <Typography sx={{ maxWidth: 'md', mx: 'auto', my: 4 }} variant="body_normal">
-            View all the public registries to find Crossplane providers, functions, configurations
-            and more.
-          </Typography>
-          <Button href="/registries" styleType="turquoiseContained">
-            View Registries
-          </Button>
-        </Box>
 
         <Box sx={{ maxWidth: 476, mx: 'auto', pt: 16 }}>
           <Image
