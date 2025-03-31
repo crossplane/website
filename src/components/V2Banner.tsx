@@ -94,7 +94,7 @@ const V2Banner = () => {
           </Box>
         </Box>
         <Typography variant="h2" sx={{ lineHeight: 1.2, color: '#FFFFFF' }}>
-          Crossplane 2.0 Preview
+          Crossplane v2 Preview
         </Typography>
         <Box sx={iconsContainerStyle}>
           <Box 
