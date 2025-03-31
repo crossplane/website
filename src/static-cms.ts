@@ -31,11 +31,10 @@ export const indexData: HomePage = {
   header: [
     {
       value: {
-        title: 'The cloud native control plane framework',
+        title: 'Crossplane Is the Cloud-Native Framework for Platform Engineering',
         subtitle:
-          'Build control planes without needing to write code. Crossplane has a highly extensible backend that ' +
-          'enables you to orchestrate applications and infrastructure no matter where they run, and a highly ' +
-          'configurable frontend that lets you define the declarative API it offers.',
+          'Create platforms like cloud providers: Build your own APIs and services with control planes. ' +
+          'Extend Kubernetes to manage any resource anywhere. Use a library of components to assemble your platform faster.',
         buttons: [
           {
             value: {

@@ -1,7 +1,9 @@
 import React from 'react';
 
-import Lottie from 'lottie-react';
+import dynamic from 'next/dynamic';
 import GitHubButton from 'react-github-btn';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 import Image from 'next/future/image';
 
@@ -13,6 +15,7 @@ import * as routes from 'src/routes';
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import CrossplaneLogosSection from 'src/components/CrossplaneLogosSection';
+import V2Banner from 'src/components/V2Banner';
 import Button from 'src/elements/Button';
 import Link from 'src/elements/Link';
 import CMSImage from 'src/elements/CMSImage';
@@ -141,9 +144,38 @@ const HeaderSection = (props: HomePageHeader) => {
           </Typography>
         </Box>
       </Box>
-      <Typography variant="body_normal" color="#fff" sx={{ maxWidth: 950, mx: 'auto' }}>
-        {props.subtitle}
-      </Typography>
+      <Box sx={{ maxWidth: 950, mx: 'auto', textAlign: 'left' }}>
+        <Typography variant="body_normal" color="#fff" sx={{ mb: 1.5 }}>
+          Create platforms like cloud providers:
+        </Typography>
+        <Box component="ul" sx={{ 
+          pl: { _: 5, md: 8 }, 
+          m: 0,
+          '& li': {
+            color: '#fff',
+            mb: 1,
+            '&::marker': {
+              fontSize: '1.2em',
+            }
+          }
+        }}>
+          <Box component="li">
+            <Typography variant="body_normal" color="#fff">
+              Build your own APIs and services with control planes
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography variant="body_normal" color="#fff">
+              Extend Kubernetes to manage any resource anywhere
+            </Typography>
+          </Box>
+          <Box component="li">
+            <Typography variant="body_normal" color="#fff">
+              Use a library of components to assemble your platform faster
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
       <Box sx={{ mt: 6, mb: { _: 6, sm: 10 } }}>
         <Box sx={headerButtons}>
           {props.buttons.map(({ id, value }) => (
@@ -152,45 +184,7 @@ const HeaderSection = (props: HomePageHeader) => {
             </Button>
           ))}
         </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            mt: 3,
-          }}
-        >
-          <Link
-            href={routes.githubUrl}
-            muiProps={{ target: '_blank', sx: { ...socialLinksStyles } }}
-          >
-            <Box mr={1.5} display="flex">
-              <GitHubIcon fontSize="small" />
-            </Box>
-            GitHub
-          </Link>
-          <Link
-            href={routes.slackUrl}
-            muiProps={{ target: '_blank', sx: { ml: 3, ...socialLinksStyles } }}
-          >
-            <Box mr={1.5} display="flex">
-              <SlackIcon />
-            </Box>
-            Slack
-          </Link>
-        </Box>
-        <Box sx={{ mt: 3 }}>
-          <GitHubButton
-            href="https://github.com/crossplane/crossplane"
-            data-color-scheme="no-preference: light; light: light; dark: light;"
-            data-icon="octicon-star"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star crossplane/crossplane on GitHub"
-          >
-            Star project
-          </GitHubButton>
-        </Box>
+        <V2Banner />
       </Box>
     </>
   );
