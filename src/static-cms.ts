@@ -34,7 +34,8 @@ export const indexData: HomePage = {
         title: 'Crossplane Is the Cloud-Native Framework for Platform Engineering',
         subtitle:
           'Create platforms like cloud providers: Build your own APIs and services with control planes. ' +
-          'Extend Kubernetes to manage any resource anywhere. Use a library of components to assemble your platform faster.',
+          'Extend Kubernetes to manage any resource anywhere. Use a library of components to assemble your ' +
+          'platform faster.',
         buttons: [
           {
             value: {
@@ -73,9 +74,9 @@ export const indexData: HomePage = {
   section_1_title: 'Created to power your platform',
   section_1_sub_title:
     'Upbound built Crossplane to help organizations build their platforms like the cloud vendors build theirs—with ' +
-    'control planes. Crossplane is an open source, CNCF project built on the foundation of Kubernetes to orchestrate ' +
-    'anything. Encapsulate policies, permissions, and other guardrails behind a custom API line to enable your ' +
-    'customers to self-service without needing to become an infrastructure expert.',
+    'control planes. Crossplane is an open source, CNCF project built on the foundation of Kubernetes to ' +
+    'orchestrate anything. Encapsulate policies, permissions, and other guardrails behind a custom API line to ' +
+    'enable your customers to self-service without needing to become an infrastructure expert.',
   section_1_button: [
     {
       value: {

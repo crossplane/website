@@ -1,7 +1,6 @@
 import React from 'react';
 
 import dynamic from 'next/dynamic';
-import GitHubButton from 'react-github-btn';
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
@@ -10,8 +9,6 @@ import Image from 'next/future/image';
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, fontAvenirBold, MQ } from 'src/theme';
 
-import * as routes from 'src/routes';
-
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import CrossplaneLogosSection from 'src/components/CrossplaneLogosSection';
@@ -19,9 +16,6 @@ import V2Banner from 'src/components/V2Banner';
 import Button from 'src/elements/Button';
 import Link from 'src/elements/Link';
 import CMSImage from 'src/elements/CMSImage';
-
-import GitHubIcon from '@mui/icons-material/GitHub';
-import SlackIcon from 'src/svg/SlackIcon';
 import iceCreamIcon from 'public/icecream-icon.svg';
 import createdBy from 'public/created-by-upbound.svg';
 import upboundMarketplace from 'public/upbound-marketplace.svg';
@@ -57,25 +51,6 @@ const headerButtons: SxProps = {
     ':not(:last-of-type)': {
       mb: { _: 5, sm: 0 },
     },
-  },
-};
-
-const socialLinksStyles: SxProps = {
-  display: 'flex',
-  alignItems: 'center',
-  fontSize: '18px',
-  fontWeight: '700',
-  textAlign: 'center',
-  color: '#fff',
-  opacity: '.85',
-
-  '&:hover': {
-    opacity: '1',
-  },
-
-  '@media screen and (min-width: 1170px)': {
-    fontSize: '17px',
-    mb: 0,
   },
 };
 
@@ -148,17 +123,20 @@ const HeaderSection = (props: HomePageHeader) => {
         <Typography variant="body_normal" color="#fff" sx={{ mb: 1.5 }}>
           Create platforms like cloud providers:
         </Typography>
-        <Box component="ul" sx={{ 
-          pl: { _: 5, md: 8 }, 
-          m: 0,
-          '& li': {
-            color: '#fff',
-            mb: 1,
-            '&::marker': {
-              fontSize: '1.2em',
-            }
-          }
-        }}>
+        <Box
+          component="ul"
+          sx={{
+            pl: { _: 5, md: 8 },
+            m: 0,
+            '& li': {
+              color: '#fff',
+              mb: 1,
+              '&::marker': {
+                fontSize: '1.2em',
+              },
+            },
+          }}
+        >
           <Box component="li">
             <Typography variant="body_normal" color="#fff">
               Build your own APIs and services with control planes

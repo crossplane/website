@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, SxProps } from '@mui/material';
-import { COLORS, MQ } from 'src/theme';
+import { COLORS } from 'src/theme';
 import Link from 'src/elements/Link';
 import Image from 'next/future/image';
 import iceCreamIcon from 'public/icecream-icon.svg';
@@ -64,8 +64,8 @@ const V2Banner = () => {
     <Box sx={root}>
       <Box sx={titleContainer}>
         <Box sx={iconsContainerStyle}>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               position: 'absolute',
               top: '50%',
               left: 0,
@@ -73,13 +73,13 @@ const V2Banner = () => {
               '& img': {
                 width: { _: 24, md: 32 },
                 height: 'auto',
-              }
+              },
             }}
           >
             <Image src={iceCreamIcon} alt="Ice cream icon" />
           </Box>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               position: 'absolute',
               top: '50%',
               left: { _: 15, md: 20 },
@@ -87,7 +87,7 @@ const V2Banner = () => {
               '& img': {
                 width: { _: 24, md: 32 },
                 height: 'auto',
-              }
+              },
             }}
           >
             <Image src={iceCreamIcon} alt="Ice cream icon" />
@@ -97,8 +97,8 @@ const V2Banner = () => {
           Crossplane v2 Preview
         </Typography>
         <Box sx={iconsContainerStyle}>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               position: 'absolute',
               top: '50%',
               left: 0,
@@ -106,13 +106,13 @@ const V2Banner = () => {
               '& img': {
                 width: { _: 24, md: 32 },
                 height: 'auto',
-              }
+              },
             }}
           >
             <Image src={iceCreamIcon} alt="Ice cream icon" />
           </Box>
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               position: 'absolute',
               top: '50%',
               left: { _: 15, md: 20 },
@@ -120,7 +120,7 @@ const V2Banner = () => {
               '& img': {
                 width: { _: 24, md: 32 },
                 height: 'auto',
-              }
+              },
             }}
           >
             <Image src={iceCreamIcon} alt="Ice cream icon" />
