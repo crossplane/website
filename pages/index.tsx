@@ -7,7 +7,7 @@ const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import Image from 'next/future/image';
 
 import { Box, SxProps, Typography } from '@mui/material';
-import { COLORS, fontAvenirBold, MQ } from 'src/theme';
+import { COLORS, MQ } from 'src/theme';
 
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
@@ -18,7 +18,6 @@ import Link from 'src/elements/Link';
 import CMSImage from 'src/elements/CMSImage';
 import iceCreamIcon from 'public/icecream-icon.svg';
 import createdBy from 'public/created-by-upbound.svg';
-import upboundMarketplace from 'public/upbound-marketplace.svg';
 import gradientGraphic from 'public/background-graphics/gradient-graphic.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
 import truckAnim from 'public/animations/truck.json';
@@ -263,49 +262,6 @@ const FeaturesSection = () => {
   );
 };
 
-const UpboundItem = ({ upboundItem }: { upboundItem: UpboundItem }) => {
-  const { image, title, text, footer_text } = upboundItem;
-
-  return (
-    <Box sx={cardStyles}>
-      <Box>
-        <Box sx={providerIcon}>
-          {image && image[0] && <CMSImage value={image[0].value} objectFit="cover" />}
-        </Box>
-      </Box>
-      <Box sx={{ flex: '1 1 auto', mt: 3 }}>
-        <Typography
-          variant="body_normal"
-          sx={{
-            mb: 2,
-            ...fontAvenirBold,
-          }}
-        >
-          {title}
-        </Typography>
-        <Typography variant="body_small" sx={{ mb: 2 }}>
-          {text}
-        </Typography>
-      </Box>
-      <Box>
-        <Typography variant="body_small" sx={{ color: COLORS.blueBayoux }}>
-          {footer_text}
-        </Typography>
-      </Box>
-    </Box>
-  );
-};
-
-const UpboundItems = ({ section_3_card_items }: { section_3_card_items: UpboundItems }) => {
-  return (
-    <Box sx={{ mt: 8, ...gridLayout }}>
-      {section_3_card_items.map((item) => (
-        <UpboundItem key={item.id} upboundItem={item} />
-      ))}
-    </Box>
-  );
-};
-
 const Home = () => {
   return (
     <PageProvider
@@ -416,30 +372,7 @@ const Home = () => {
         >
           <FeaturesSection />
         </Box>
-        <Typography variant="h2" textAlign="center">
-          {cmsData.section_3_title}
-        </Typography>
-        <Box sx={{ maxWidth: 950, mx: 'auto', textAlign: 'center' }}>
-          <Box sx={{ maxWidth: 306.89, mx: 'auto', my: 4 }}>
-            <Image
-              src={upboundMarketplace}
-              alt="upboundMarketplace"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          </Box>
-          <Typography variant="body_normal">{cmsData.section_3_text}</Typography>
-        </Box>
-        <Box>
-          <UpboundItems section_3_card_items={cmsData.section_3_card_items} />
-          <Box textAlign="center">
-            {cmsData.section_3_button[0] && (
-              <Button sx={{ mt: 6 }} cmsValue={cmsData.section_3_button[0].value}>
-                {cmsData.section_3_button[0].value.text}
-              </Button>
-            )}
-          </Box>
-        </Box>
+
         <Box sx={{ maxWidth: 476, mx: 'auto', pt: 16 }}>
           <Image
             src={gradientGraphicSM}

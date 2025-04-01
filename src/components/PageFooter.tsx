@@ -13,7 +13,7 @@ import CTACard from 'src/components/CTACard';
 import cncfLogo from 'public/cncf-logo.png';
 import logo from 'public/crossplane-logo.svg';
 import XIcon from '@mui/icons-material/X';
-import PodcastsIcon from '@mui/icons-material/Podcasts';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ForumIcon from '@mui/icons-material/Forum';
 import PolicyIcon from '@mui/icons-material/Policy';
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -79,6 +79,10 @@ type Props = {
   ctaBtnTwoTarget?: string;
   ctaBtnTwoStyleType?: ButtonStyleType;
   // ctaCustomSx?: SxProps;
+};
+
+const getCurrentYear = () => {
+  return new Date().getUTCFullYear();
 };
 
 const PageFooter = ({
@@ -159,10 +163,10 @@ Props) => {
                   Youtube
                 </Box>
               </Link>
-              <Link href={routes.podcastUrl} muiProps={{ target: '_blank' }}>
+              <Link href={routes.linkedInUrl} muiProps={{ target: '_blank' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <PodcastsIcon color="inherit" fontSize="small" sx={{ mr: 0.75 }} />
-                  Podcast
+                  <LinkedInIcon color="inherit" fontSize="small" sx={{ mr: 0.75 }} />
+                  LinkedIn
                 </Box>
               </Link>
               <Link href={routes.forumUrl} muiProps={{ target: '_blank' }}>
@@ -214,7 +218,7 @@ Props) => {
               }}
             >
               <Typography fontWeight={600} sx={{ mb: 2 }}>
-                © Crossplane Authors 2023. Documentation distributed under{' '}
+                © Crossplane Authors {getCurrentYear()}. Documentation distributed under{' '}
                 <Link
                   href={routes.creativeCommonsUrl}
                   muiProps={{ color: COLORS.turquoise, target: '_blank' }}
@@ -224,9 +228,9 @@ Props) => {
                 .
               </Typography>
               <Typography fontWeight={600}>
-                © 2023 The Linux Foundation. All rights reserved. The Linux Foundation has
-                registered trademarks and uses trademarks. For a list of trademarks of The Linux
-                Foundation, please see our{' '}
+                © {getCurrentYear()} The Linux Foundation. All rights reserved. The Linux
+                Foundation has registered trademarks and uses trademarks. For a list of trademarks
+                of The Linux Foundation, please see our{' '}
                 <Link
                   href={routes.trademarkUsageUrl}
                   muiProps={{ color: COLORS.turquoise, target: '_blank' }}

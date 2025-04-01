@@ -49,6 +49,7 @@ import stone from 'public/home-page/crossplane-logos/047-stone.svg';
 import tigera from 'public/home-page/crossplane-logos/048-tigera.svg';
 import vmware from 'public/home-page/crossplane-logos/049-vmware.svg';
 import adidas from 'public/home-page/crossplane-logos/adidas-original.svg';
+import alauda from 'public/home-page/crossplane-logos/alauda-original.svg';
 import asapp from 'public/home-page/crossplane-logos/asapp-original.svg';
 import beamary from 'public/home-page/crossplane-logos/beamary-original.svg';
 import behance from 'public/home-page/crossplane-logos/behance-original.svg';
@@ -70,6 +71,7 @@ import glossier from 'public/home-page/crossplane-logos/glossier-original.svg';
 import goodRx from 'public/home-page/crossplane-logos/good-rx-original.svg';
 import helloFresh from 'public/home-page/crossplane-logos/hello-fresh-original.svg';
 import iheartRadio from 'public/home-page/crossplane-logos/iheart-radio-original.svg';
+import infracloud from 'public/home-page/crossplane-logos/infracloud-original.svg';
 import mandiant from 'public/home-page/crossplane-logos/mandiant-original.svg';
 import maze from 'public/home-page/crossplane-logos/maze-original.svg';
 import morpheus from 'public/home-page/crossplane-logos/morpheus-original.svg';
@@ -139,6 +141,7 @@ const crossplaneLogos = [
   tigera,
   vmware,
   adidas,
+  alauda,
   asapp,
   beamary,
   behance,
@@ -160,6 +163,7 @@ const crossplaneLogos = [
   goodRx,
   helloFresh,
   iheartRadio,
+  infracloud,
   mandiant,
   maze,
   morpheus,
