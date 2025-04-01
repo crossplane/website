@@ -15,7 +15,6 @@ import CrossplaneLogosSection from 'src/components/CrossplaneLogosSection';
 import V2Banner from 'src/components/V2Banner';
 import Button from 'src/elements/Button';
 import Link from 'src/elements/Link';
-import CMSImage from 'src/elements/CMSImage';
 import iceCreamIcon from 'public/icecream-icon.svg';
 import createdBy from 'public/created-by-upbound.svg';
 import gradientGraphic from 'public/background-graphics/gradient-graphic.png';
@@ -51,46 +50,6 @@ const headerButtons: SxProps = {
       mb: { _: 5, sm: 0 },
     },
   },
-};
-
-const gridLayout: SxProps = {
-  display: 'grid',
-  gap: 4,
-  gridTemplateColumns: 'repeat(1, 1fr)',
-
-  [MQ.md]: {
-    gridTemplateColumns: 'repeat(3, 1fr)',
-  },
-};
-
-const cardStyles: SxProps = {
-  backgroundColor: '#fff',
-  borderRadius: '20px',
-  boxShadow: '1px 0px 16px 2px rgba(215,215,215,0.5)',
-  p: 4,
-
-  flex: '1 0 0%',
-  display: 'flex',
-  flexDirection: 'column',
-
-  '& > a': {
-    display: 'flex',
-    flexDirection: 'column',
-    flex: '1 0 0%',
-  },
-};
-
-const providerIcon: SxProps = {
-  backgroundColor: '#DCE7F2',
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
-  width: '100%',
-  height: '90px',
-  maxWidth: '90px',
-  borderRadius: '20px',
-  overflow: 'hidden',
-  p: 2,
 };
 
 const HeaderSection = (props: HomePageHeader) => {

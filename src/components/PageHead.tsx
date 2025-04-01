@@ -73,7 +73,7 @@ const PageHead: React.FC<{
             "name": "Crossplane",
             "email": "info@crossplane.io",
             "foundingDate": "December 2018",
-            "description": "Crossplane is an open-source framework for building control planes and was the first to recognize Kubernetes for its control plane, and not as a container orchestrator, and has been leading the effort to democratize control plane technology in the cloud-native community.",
+            "description": "Create platforms like cloud providers by building your own APIs and services with control planes, extening Kubernetes to manage any resource anywhere, and using a library of components to assemble your platform faster.",
             "memberOf": {
               "@type": "Organization",
               "name": "CNCF",
