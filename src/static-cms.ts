@@ -31,11 +31,11 @@ export const indexData: HomePage = {
   header: [
     {
       value: {
-        title: 'The cloud native control plane framework',
+        title: 'Crossplane Is the Cloud-Native Framework for Platform Engineering',
         subtitle:
-          'Build control planes without needing to write code. Crossplane has a highly extensible backend that ' +
-          'enables you to orchestrate applications and infrastructure no matter where they run, and a highly ' +
-          'configurable frontend that lets you define the declarative API it offers.',
+          'Create platforms like cloud providers: Build your own APIs and services with control planes. ' +
+          'Extend Kubernetes to manage any resource anywhere. Use a library of components to assemble your ' +
+          'platform faster.',
         buttons: [
           {
             value: {
@@ -74,9 +74,9 @@ export const indexData: HomePage = {
   section_1_title: 'Created to power your platform',
   section_1_sub_title:
     'Upbound built Crossplane to help organizations build their platforms like the cloud vendors build theirs—with ' +
-    'control planes. Crossplane is an open source, CNCF project built on the foundation of Kubernetes to orchestrate ' +
-    'anything. Encapsulate policies, permissions, and other guardrails behind a custom API line to enable your ' +
-    'customers to self-service without needing to become an infrastructure expert.',
+    'control planes. Crossplane is an open source, CNCF project built on the foundation of Kubernetes to ' +
+    'orchestrate anything. Encapsulate policies, permissions, and other guardrails behind a custom API line to ' +
+    'enable your customers to self-service without needing to become an infrastructure expert.',
   section_1_button: [
     {
       value: {
@@ -282,13 +282,19 @@ export const indexData: HomePage = {
     },
   ],
   cms_head_props: {
-    title: 'Home Page',
-    seo_title: '',
-    search_description: '',
-    seo_keywords: '',
-    og_twitter_title: '',
+    title: 'Crossplane Is the Cloud-Native Framework for Platform Engineering',
+    seo_title: 'Crossplane Is the Cloud-Native Framework for Platform Engineering',
+    search_description:
+      'Create platforms like cloud providers by building your own APIs and services with ' +
+      'control planes, extending Kubernetes to manage any resource anywhere, and using a library of components to ' +
+      'assemble your platform faster.',
+    seo_keywords: 'crossplane, kubernetes, platform engineering, control planes, cloud native',
+    og_twitter_title: 'Crossplane Is the Cloud-Native Framework for Platform Engineering',
     og_twitter_url: 'https://www.crossplane.io/',
-    og_twitter_description: '',
+    og_twitter_description:
+      'Create platforms like cloud providers by building your own APIs and services with ' +
+      'control planes, extending Kubernetes to manage any resource anywhere, and using a library of components to ' +
+      'assemble your platform faster',
     og_twitter_image: {
       meta: {
         download_url: '/og-images/crossplane-og.jpg',
