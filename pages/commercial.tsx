@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
@@ -116,7 +115,7 @@ const Why = () => {
               }}
             >
               Upbound is the creator of open source Crossplane. With security, support, and official
-              providers, Upbound’s platform gives you everything you need to scale Crossplane and
+              providers, Upbound's platform gives you everything you need to scale Crossplane and
               manage all your infrastructure in one place.
             </Typography>
             <Box sx={btnContainer}>

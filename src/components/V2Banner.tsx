@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography, SxProps } from '@mui/material';
 import { COLORS } from 'src/theme';
 import Link from 'src/elements/Link';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import iceCreamIcon from 'public/icecream-icon.svg';
 
 const root: SxProps = {

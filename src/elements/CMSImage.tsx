@@ -35,8 +35,8 @@ const CMSImage = ({ value, ...props }: CMSImageProps) => {
         const viewBoxSplit = image.view_box.split(' ');
         data = {
           ...data,
-          width: viewBoxSplit[2],
-          height: viewBoxSplit[3],
+          width: parseInt(viewBoxSplit[2], 10),
+          height: parseInt(viewBoxSplit[3], 10),
         };
       }
       if (image.width) {
