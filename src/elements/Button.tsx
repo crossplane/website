@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 import { Box, Button as MuiButton, ButtonProps, CircularProgress, SxProps } from '@mui/material';
 import { COLORS, fontAvenirBold, fontAvenirRoman, MQ } from 'src/theme';

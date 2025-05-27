@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Image from 'next/future/image';
+import Image from 'next/image';
 import { COLORS, MQ, fontAvenirRoman, fontAvenirBold } from 'src/theme';
 
 import { AppBar, Drawer, IconButton, Toolbar, Box, SxProps, useMediaQuery } from '@mui/material';

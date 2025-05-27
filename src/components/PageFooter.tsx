@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Image from 'next/future/image';
+import Image from 'next/image';
 
 import { Box, Typography, SxProps } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
