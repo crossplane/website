@@ -240,12 +240,16 @@ const CPLogoBox = memo(
           }}
         >
           {logoOne ? (
-            <Image src={logoOne} alt="company logo" layout="fill" objectFit="contain" />
+            <span>
+              <Image src={logoOne} alt="company logo" layout="fill" objectFit="contain" />
+            </span>
           ) : (
             <span></span>
           )}
           {logoTwo ? (
-            <Image src={logoTwo} alt="company logo" layout="fill" objectFit="contain" />
+            <span>
+              <Image src={logoTwo} alt="company logo" layout="fill" objectFit="contain" />
+            </span>
           ) : (
             <span></span>
           )}
