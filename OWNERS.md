@@ -15,6 +15,7 @@ guidelines and responsibilities for the steering committee and maintainers.
 * Michael Goff <michael@upbound.io> ([thephred](https://github.com/thephred))
 * Nic Cope <negz@upbound.io> ([negz](https://github.com/negz))
 * Pete Lumbis <pete@upbound.io> ([plumbis](https://github.com/plumbis))
+* Jean du Plessis <jean@upbound.io> ([jeanduplessis](https://github.com/jeanduplessis))
 
 ## Emeritus maintainers
 
