@@ -273,7 +273,22 @@ export const globalStyle = css`
   }
 
   ::-webkit-scrollbar {
-    display: none;
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #f0f0f0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
   }
 
   body {
