@@ -1,0 +1,1 @@
+Update the Slack member count on the website homepage. Find the current value in `src/static-cms.ts` at `section_1_slack_title_count` and update it to the new number provided: $ARGUMENTS. Maintain the same comma-separated number format (e.g., "13,440+"). The updated count will be displayed in the logos section of the homepage.

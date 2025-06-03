@@ -1,0 +1,1 @@
+Analyze the current git changes and create an appropriate commit message, then make a git commit with DCO sign-off using `git commit -s -m "your generated message"`. The -s flag automatically adds the Developer Certificate of Origin sign-off with the current user's git configuration.
