@@ -13,6 +13,11 @@ const nextConfig = {
         source: '/community',
         destination: '/commercial',
         permanent: true,
+      },
+      {
+        source: '/privacy-policy',
+        destination: 'https://www.linuxfoundation.org/legal/privacy-policy',
+        permanent: true,
       }
     ];
   },

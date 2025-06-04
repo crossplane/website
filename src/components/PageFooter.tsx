@@ -175,7 +175,7 @@ Props) => {
                   Forum
                 </Box>
               </Link>
-              <Link href={routes.privacyUrl}>
+              <Link href={routes.privacyUrl} muiProps={{ target: '_blank' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                   <PolicyIcon color="inherit" fontSize="small" sx={{ mr: 0.75 }} />
                   Privacy Policy
