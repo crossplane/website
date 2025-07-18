@@ -71,7 +71,7 @@ const PageHead: React.FC<{
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Crossplane",
-            "email": "info@crossplane.io",
+            "email": "crossplane-info@lists.cncf.io",
             "foundingDate": "December 2018",
             "description": "Create platforms like cloud providers by building your own APIs and services with control planes, extening Kubernetes to manage any resource anywhere, and using a library of components to assemble your platform faster.",
             "memberOf": {
