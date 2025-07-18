@@ -285,7 +285,7 @@ const Why = () => {
             <Typography variant="body_normal" sx={{ whiteSpace: 'break-spaces' }}>
               Building on top of Crossplane or offering support? {'\n'}
               <Link
-                href="mailto:info@crossplane.io"
+                href="mailto:crossplane-info@lists.cncf.io"
                 muiProps={{
                   target: '_blank',
                   fontWeight: 700,
