@@ -44,7 +44,8 @@ export const indexData: HomePage = {
               link: [
                 {
                   type: 'external_url',
-                  value: 'https://docs.crossplane.io/latest/getting-started/',
+                  value:
+                    'https://docs.crossplane.io/latest/get-started/get-started-with-composition/',
                   id: '166370c8-47c8-4b5e-8940-b83685de0105',
                 },
               ],
@@ -59,7 +60,7 @@ export const indexData: HomePage = {
               link: [
                 {
                   type: 'external_url',
-                  value: 'https://docs.crossplane.io/latest/concepts/',
+                  value: 'https://docs.crossplane.io/latest/whats-crossplane/',
                   id: '12294e84-2fc5-47b5-b339-e3765f5ab34b',
                 },
               ],
@@ -272,7 +273,7 @@ export const indexData: HomePage = {
         link: [
           {
             type: 'external_url',
-            value: 'https://docs.crossplane.io/latest/concepts/',
+            value: 'https://docs.crossplane.io/latest/whats-crossplane/',
             id: '0501eae5-3f2d-4721-ac75-989883ded410',
           },
         ],

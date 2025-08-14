@@ -58,11 +58,15 @@
               "link": [
                 {
                   "type": "external_url",
-                  "value": "https://docs.crossplane.io/latest/getting-started/",
+                  "value": "https://docs.crossplane.io/latest/get-started/get-started-with-composition/",
                   "id": "166370c8-47c8-4b5e-8940-b83685de0105",
                 },
               ],
-              "icon": { "title": null, "url": null, "view_box": null },
+              "icon": {
+                "title": null,
+                "url": null,
+                "view_box": null
+              },
               "has_arrow": false,
             },
             "id": "1b7b265f-3b70-4329-8420-4eebcfcac261",
@@ -79,7 +83,11 @@
                   "id": "12294e84-2fc5-47b5-b339-e3765f5ab34b",
                 },
               ],
-              "icon": { "title": null, "url": null, "view_box": null },
+              "icon": {
+                "title": null,
+                "url": null,
+                "view_box": null
+              },
               "has_arrow": false,
             },
             "id": "613f7353-437d-4435-b6e4-199d1d9d5f18",
@@ -104,7 +112,11 @@
             "id": "9899c87a-5b8a-4de2-aecd-456cce51950a",
           },
         ],
-        "icon": { "title": null, "url": null, "view_box": null },
+        "icon": {
+          "title": null,
+          "url": null,
+          "view_box": null
+        },
         "has_arrow": false,
       },
       "id": "61e05ad8-8f8d-4c24-86ee-eb3fa74f7a3b",
@@ -126,7 +138,11 @@
             "id": "7e9f845f-6f95-41b7-962c-92f3d4a7960c",
           },
         ],
-        "icon": { "title": null, "url": null, "view_box": null },
+        "icon": {
+          "title": null,
+          "url": null,
+          "view_box": null
+        },
         "has_arrow": false,
       },
       "id": "22da97e1-2d77-405a-a192-66dbdaebb22f",
@@ -229,7 +245,9 @@
   "section_3_card_items": [
     {
       "id": 1,
-      "meta": { "type": "app.HomeSec3ItemsItem" },
+      "meta": {
+        "type": "app.HomeSec3ItemsItem"
+      },
       "image": [
         {
           "type": "svg_image",
@@ -251,7 +269,9 @@
     },
     {
       "id": 2,
-      "meta": { "type": "app.HomeSec3ItemsItem" },
+      "meta": {
+        "type": "app.HomeSec3ItemsItem"
+      },
       "image": [
         {
           "type": "svg_image",
@@ -273,7 +293,9 @@
     },
     {
       "id": 3,
-      "meta": { "type": "app.HomeSec3ItemsItem" },
+      "meta": {
+        "type": "app.HomeSec3ItemsItem"
+      },
       "image": [
         {
           "type": "svg_image",
@@ -307,7 +329,11 @@
             "id": "c7ef776d-0a07-40fc-a9c2-764a49fc3a84",
           },
         ],
-        "icon": { "title": null, "url": null, "view_box": null },
+        "icon": {
+          "title": null,
+          "url": null,
+          "view_box": null
+        },
         "has_arrow": false,
       },
       "id": "2b1d04fa-ac7e-4dc0-95bd-4a74647b3367",
@@ -328,7 +354,11 @@
             "id": "449425b2-85dc-46bf-aa59-ada1dc3b672f",
           },
         ],
-        "icon": { "title": null, "url": null, "view_box": null },
+        "icon": {
+          "title": null,
+          "url": null,
+          "view_box": null
+        },
         "has_arrow": false,
       },
       "id": "30ac8e22-029b-4b24-99ac-e175bf394bf5",
@@ -345,7 +375,11 @@
             "id": "0501eae5-3f2d-4721-ac75-989883ded410",
           },
         ],
-        "icon": { "title": null, "url": null, "view_box": null },
+        "icon": {
+          "title": null,
+          "url": null,
+          "view_box": null
+        },
         "has_arrow": false,
       },
       "id": "bf1bf77b-7f1a-4b67-a064-0b90029ef522",
