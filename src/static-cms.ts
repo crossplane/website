@@ -44,7 +44,8 @@ export const indexData: HomePage = {
               link: [
                 {
                   type: 'external_url',
-                  value: 'https://docs.crossplane.io/latest/get-started/get-started-with-composition/',
+                  value:
+                    'https://docs.crossplane.io/latest/get-started/get-started-with-composition/',
                   id: '166370c8-47c8-4b5e-8940-b83685de0105',
                 },
               ],

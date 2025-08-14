@@ -8,7 +8,8 @@ export const sitemap = '/sitemap-0.xml';
 export const githubUrl = 'https://github.com/crossplane/crossplane';
 export const slackUrl = 'https://slack.crossplane.io/';
 export const docsUrl = 'https://docs.crossplane.io';
-export const docsGetStartedUrl = 'https://docs.crossplane.io/latest/get-started/get-started-with-composition/';
+export const docsGetStartedUrl =
+  'https://docs.crossplane.io/latest/get-started/get-started-with-composition/';
 export const blogUrl = 'https://blog.crossplane.io/';
 export const twitterUrl = 'https://twitter.com/crossplane_io';
 export const youtubeUrl = 'https://www.youtube.com/@Crossplane';
