@@ -94,7 +94,7 @@ const V2Banner = () => {
           </Box>
         </Box>
         <Typography variant="h2" sx={{ lineHeight: 1.2, color: '#FFFFFF' }}>
-          Crossplane v2 Preview
+          Crossplane v2.0
         </Typography>
         <Box sx={iconsContainerStyle}>
           <Box
@@ -129,22 +129,16 @@ const V2Banner = () => {
       </Box>
       <Box sx={linksContainer}>
         <Link
-          href="https://docs.crossplane.io/v2.0-preview"
+          href="https://docs.crossplane.io/latest/whats-new/"
           muiProps={{ sx: linkStyle, target: '_blank' }}
         >
           Learn More
         </Link>
         <Link
-          href="https://docs.crossplane.io/v2.0-preview/get-started/install/"
+          href="https://docs.crossplane.io/latest/get-started/install/"
           muiProps={{ sx: linkStyle, target: '_blank' }}
         >
           Try it Out
-        </Link>
-        <Link
-          href="https://github.com/crossplane/crossplane/pull/6255"
-          muiProps={{ sx: linkStyle, target: '_blank' }}
-        >
-          Join the discussion
         </Link>
       </Box>
     </Box>
