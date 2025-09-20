@@ -16,6 +16,7 @@ import upboundLogo from 'public/upbound-logo.svg';
 import vshnLogo from 'public/vshn-logo.svg';
 import alaudaLogo from 'public/alauda-logo.svg';
 import infracloudLogo from 'public/infracloud-logo.svg';
+import cloudflavorLogo from 'public/home-page/cloudflavor.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
@@ -259,6 +260,60 @@ const Why = () => {
                 styleType="darkOutlined"
                 startIcon={<GitHubIcon />}
                 href="https://github.com/infracloudio"
+                target="_blank"
+              >
+                GitHub
+              </Button>
+            </Box>
+          </Box>
+        </Box>
+        <Box sx={cardStyles}>
+          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
+            <Box
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                mb: { _: 3, md: 0 },
+              }}
+            >
+              <Box sx={{ maxWidth: 94, mr: 2 }}>
+                <Image
+                  src={cloudflavorLogo}
+                  alt="Cloudflavor logo"
+                  sizes="100vw"
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              </Box>
+              <Typography variant="body_big" sx={{ fontWeight: 500, color: '#20B5C9' }}>
+                Cloudflavor
+              </Typography>
+            </Box>
+          </Box>
+          <Box sx={{ width: { _: '100%', md: '50%' } }}>
+            <Typography
+              variant="body_normal"
+              sx={{
+                mb: 2,
+              }}
+            >
+              Cloudflavor provides comprehensive Crossplane consulting and managed services to help
+              organizations adopt and scale their cloud-native infrastructure. With deep expertise
+              in Kubernetes and cloud platforms, they enable seamless infrastructure automation and
+              management.
+            </Typography>
+            <Box sx={btnContainer}>
+              <Button
+                styleType="turquoiseContained"
+                href="https://cloudflavor.io/products/crossplane/"
+                target="_blank"
+              >
+                Learn More
+              </Button>
+              <Button
+                styleType="darkOutlined"
+                startIcon={<GitHubIcon />}
+                href="https://github.com/cloudflavor"
                 target="_blank"
               >
                 GitHub
