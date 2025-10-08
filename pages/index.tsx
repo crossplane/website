@@ -302,8 +302,7 @@ const Home = () => {
             <Box sx={{ maxWidth: 269, mx: 'auto', my: 3 }}>
               <Image
                 src={createdBy}
-                alt="createdBy"
-                sizes="100vw"
+                alt="Created by Upbound"
                 style={{ width: '100%', height: 'auto' }}
               />
             </Box>

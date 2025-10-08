@@ -246,8 +246,7 @@ const Why = ({}: Props) => {
             <Box sx={{ maxWidth: 269, mx: 'auto' }}>
               <Image
                 src={createdBy}
-                alt="createdBy"
-                sizes="100vw"
+                alt="Created by Upbound"
                 style={{ width: '100%', height: 'auto' }}
               />
             </Box>
