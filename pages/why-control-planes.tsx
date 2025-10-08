@@ -10,6 +10,7 @@ import * as routes from 'src/routes';
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import Button from 'src/elements/Button';
+import Link from 'src/elements/Link';
 
 import createdBy from 'public/created-by-upbound.svg';
 import headerImage from 'public/static-media/why-header-img.png';
@@ -238,22 +239,19 @@ const Why = ({}: Props) => {
             Upbound helps you build, deploy, and manage your internal cloud platforms using control
             planes, powered by Crossplane and optimized by Upbound.
           </Typography>
-          <Box sx={{ maxWidth: 269, mx: 'auto' }}>
-            <Image
-              src={createdBy}
-              alt="createdBy"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          </Box>
-          <Button
-            styleType="turquoiseContained"
-            sx={{ mt: 4 }}
+          <Link
             href={routes.upboundUrl}
-            target="_blank"
+            muiProps={{ target: '_blank', rel: 'noopener noreferrer' }}
           >
-            Learn More About Upbound
-          </Button>
+            <Box sx={{ maxWidth: 269, mx: 'auto' }}>
+              <Image
+                src={createdBy}
+                alt="createdBy"
+                sizes="100vw"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Link>
         </Box>
       </Section>
     </PageProvider>
