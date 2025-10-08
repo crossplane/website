@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
+import * as routes from 'src/routes';
 
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
@@ -294,22 +295,18 @@ const Home = () => {
             {cmsData.section_1_title}
           </Typography>
           <Typography variant="body_normal">{cmsData.section_1_sub_title}</Typography>
-          <Box sx={{ maxWidth: 269, mx: 'auto', my: 3 }}>
-            <Image
-              src={createdBy}
-              alt="createdBy"
-              sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
-            />
-          </Box>
-          {cmsData.section_1_button[0] && (
-            <Button
-              cmsValue={cmsData.section_1_button[0].value}
-              styleType={cmsData.section_1_button[0].value?.style_type}
-            >
-              {cmsData.section_1_button[0].value.text}
-            </Button>
-          )}
+          <Link
+            href={cmsData.section_1_button[0]?.value?.link?.[0]?.value || routes.upboundUrl}
+            muiProps={{ target: '_blank', rel: 'noopener noreferrer' }}
+          >
+            <Box sx={{ maxWidth: 269, mx: 'auto', my: 3 }}>
+              <Image
+                src={createdBy}
+                alt="Created by Upbound"
+                style={{ width: '100%', height: 'auto' }}
+              />
+            </Box>
+          </Link>
         </Box>
 
         <CrossplaneLogosSection {...cmsData} />
