@@ -1,5 +1,6 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import { GetServerSideProps } from 'next';
 
 import { Box, SxProps, Typography } from '@mui/material';
 import { COLORS, MQ } from 'src/theme';
@@ -20,6 +21,15 @@ import cloudflavorLogo from 'public/home-page/cloudflavor.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
+
+interface Company {
+  logo: StaticImageData;
+  alt: string;
+  description: string;
+  learnMoreUrl: string;
+  githubUrl: string;
+  name?: string;
+}
 
 const headerSection: SxProps = {
   position: 'relative',
@@ -82,7 +92,116 @@ const btnContainer: SxProps = {
   },
 };
 
-const Why = () => {
+// Company data
+const companies: Company[] = [
+  {
+    logo: upboundLogo,
+    alt: 'upbound logo',
+    description:
+      'Upbound is the creator of open source Crossplane. With security, support, and official ' +
+      "providers, Upbound's platform gives you everything you need to scale Crossplane and manage " +
+      'all your infrastructure in one place.',
+    learnMoreUrl: routes.upboundUrl,
+    githubUrl: 'https://github.com/upbound/',
+  },
+  {
+    logo: vshnLogo,
+    alt: 'vshn logo',
+    description:
+      'VSHN, a seasoned adopter of Crossplane in live environments, brings a wealth of daily usage ' +
+      'expertise to your Crossplane project. With our extensive experience, rest assured that your ' +
+      'Crossplane deployment is in capable hands.',
+    learnMoreUrl: 'https://products.vshn.ch/crossplane_support.html',
+    githubUrl: 'https://github.com/vshn/',
+  },
+  {
+    logo: alaudaLogo,
+    alt: 'alauda logo',
+    description:
+      'Alauda uses Crossplane to provide application delivery and infrastructure provisioning in ' +
+      'production environments. It empowers organizations to streamline application delivery and ' +
+      'ensure consistent configurations.',
+    learnMoreUrl: 'https://www.alauda.io/community/159726',
+    githubUrl: 'https://github.com/alauda',
+  },
+  {
+    logo: infracloudLogo,
+    alt: 'InfraCloud logo',
+    description:
+      'Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting, ' +
+      'implementation, and managed services to simplify your infrastructure management. Focus on ' +
+      'innovation, not operations, with their support.',
+    learnMoreUrl: 'https://www.infracloud.io/crossplane-consulting-support/',
+    githubUrl: 'https://github.com/infracloudio',
+  },
+  {
+    logo: cloudflavorLogo,
+    alt: 'Cloudflavor logo',
+    name: 'Cloudflavor',
+    description:
+      'Cloudflavor provides comprehensive Crossplane consulting and managed services to help ' +
+      'organizations adopt and scale their cloud-native infrastructure. With deep expertise in ' +
+      'Kubernetes and cloud platforms, they enable seamless infrastructure automation and management.',
+    learnMoreUrl: 'https://cloudflavor.io/products/crossplane/',
+    githubUrl: 'https://github.com/cloudflavor',
+  },
+];
+
+// Fisher-Yates shuffle with random ordering
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Helper function to render a company card
+const renderCompanyCard = (company: Company, extraSx?: SxProps) => {
+  const logoContent = (
+    <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
+      <Image
+        src={company.logo}
+        alt={company.alt}
+        sizes="100vw"
+        style={{ width: '100%', height: 'auto' }}
+      />
+    </Box>
+  );
+
+  const combinedSx = extraSx ? ([cardStyles, extraSx] as SxProps) : cardStyles;
+
+  return (
+    <Box sx={combinedSx} key={company.alt}>
+      <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>{logoContent}</Box>
+      <Box sx={{ width: { _: '100%', md: '50%' } }}>
+        <Typography variant="body_normal" sx={{ mb: 2 }}>
+          {company.description}
+        </Typography>
+        <Box sx={btnContainer}>
+          <Button styleType="turquoiseContained" href={company.learnMoreUrl} target="_blank">
+            Learn More
+          </Button>
+          <Button
+            styleType="darkOutlined"
+            startIcon={<GitHubIcon />}
+            href={company.githubUrl}
+            target="_blank"
+          >
+            GitHub
+          </Button>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+interface CommercialProps {
+  shuffledCompanies: Company[];
+}
+
+const Commercial = ({ shuffledCompanies }: CommercialProps) => {
   return (
     <PageProvider ctaBtnTarget="_blank">
       <Section sx={headerSection}>
@@ -97,43 +216,7 @@ const Why = () => {
             style={{ width: '100%', height: 'auto' }}
           />
         </Box>
-        <Box sx={[cardStyles, absoluteCardStyles]}>
-          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
-            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
-              <Image
-                src={upboundLogo}
-                alt="upbound logo"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Box>
-          </Box>
-          <Box sx={{ width: { _: '100%', md: '50%' } }}>
-            <Typography
-              variant="body_normal"
-              sx={{
-                mb: 2,
-              }}
-            >
-              Upbound is the creator of open source Crossplane. With security, support, and official
-              providers, Upbound's platform gives you everything you need to scale Crossplane and
-              manage all your infrastructure in one place.
-            </Typography>
-            <Box sx={btnContainer}>
-              <Button styleType="turquoiseContained" href={routes.upboundUrl} target="_blank">
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href="https://github.com/upbound/"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Box>
-          </Box>
-        </Box>
+        {renderCompanyCard(shuffledCompanies[0], absoluteCardStyles)}
       </Section>
 
       <Section
@@ -143,184 +226,7 @@ const Why = () => {
           backgroundColor: '#fff',
         }}
       >
-        <Box sx={cardStyles}>
-          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
-            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
-              <Image
-                src={vshnLogo}
-                alt="vshn logo"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Box>
-          </Box>
-          <Box sx={{ width: { _: '100%', md: '50%' } }}>
-            <Typography
-              variant="body_normal"
-              sx={{
-                mb: 2,
-              }}
-            >
-              VSHN, a seasoned adopter of Crossplane in live environments, brings a wealth of daily
-              usage expertise to your Crossplane project. With our extensive experience, rest
-              assured that your Crossplane deployment is in capable hands.
-            </Typography>
-            <Box sx={btnContainer}>
-              <Button
-                styleType="turquoiseContained"
-                href="https://products.vshn.ch/crossplane_support.html"
-                target="_blank"
-              >
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href="https://github.com/vshn/"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Box>
-          </Box>
-        </Box>
-
-        <Box sx={cardStyles}>
-          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
-            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
-              <Image
-                src={alaudaLogo}
-                alt="alauda logo"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Box>
-          </Box>
-          <Box sx={{ width: { _: '100%', md: '50%' } }}>
-            <Typography
-              variant="body_normal"
-              sx={{
-                mb: 2,
-              }}
-            >
-              Alauda uses Crossplane to provide application delivery and infrastructure provisioning
-              in production environments. It empowers organizations to streamline application
-              delivery and ensure consistent configurations.
-            </Typography>
-            <Box sx={btnContainer}>
-              <Button
-                styleType="turquoiseContained"
-                href="https://www.alauda.io/community/159726"
-                target="_blank"
-              >
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href="https://github.com/alauda"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Box>
-          </Box>
-        </Box>
-        <Box sx={cardStyles}>
-          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
-            <Box sx={{ maxWidth: 295, mx: 'auto', mb: { _: 3, md: 0 } }}>
-              <Image
-                src={infracloudLogo}
-                alt="InfraCloud logo"
-                sizes="100vw"
-                style={{ width: '100%', height: 'auto' }}
-              />
-            </Box>
-          </Box>
-          <Box sx={{ width: { _: '100%', md: '50%' } }}>
-            <Typography
-              variant="body_normal"
-              sx={{
-                mb: 2,
-              }}
-            >
-              Unlock the power of Crossplane with InfraCloud. The seasoned team offers consulting,
-              implementation, and managed services to simplify your infrastructure management. Focus
-              on innovation, not operations, with their support.
-            </Typography>
-            <Box sx={btnContainer}>
-              <Button
-                styleType="turquoiseContained"
-                href="https://www.infracloud.io/crossplane-consulting-support/"
-                target="_blank"
-              >
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href="https://github.com/infracloudio"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Box>
-          </Box>
-        </Box>
-        <Box sx={cardStyles}>
-          <Box sx={{ width: { _: '100%', md: '50%' }, pr: { _: 0, md: 5 } }}>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                mb: { _: 3, md: 0 },
-              }}
-            >
-              <Box sx={{ maxWidth: 94, mr: 2 }}>
-                <Image
-                  src={cloudflavorLogo}
-                  alt="Cloudflavor logo"
-                  sizes="100vw"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </Box>
-              <Typography variant="body_big" sx={{ fontWeight: 500, color: '#20B5C9' }}>
-                Cloudflavor
-              </Typography>
-            </Box>
-          </Box>
-          <Box sx={{ width: { _: '100%', md: '50%' } }}>
-            <Typography
-              variant="body_normal"
-              sx={{
-                mb: 2,
-              }}
-            >
-              Cloudflavor provides comprehensive Crossplane consulting and managed services to help
-              organizations adopt and scale their cloud-native infrastructure. With deep expertise
-              in Kubernetes and cloud platforms, they enable seamless infrastructure automation and
-              management.
-            </Typography>
-            <Box sx={btnContainer}>
-              <Button
-                styleType="turquoiseContained"
-                href="https://cloudflavor.io/products/crossplane/"
-                target="_blank"
-              >
-                Learn More
-              </Button>
-              <Button
-                styleType="darkOutlined"
-                startIcon={<GitHubIcon />}
-                href="https://github.com/cloudflavor"
-                target="_blank"
-              >
-                GitHub
-              </Button>
-            </Box>
-          </Box>
-        </Box>
+        {shuffledCompanies.slice(1).map((company) => renderCompanyCard(company))}
 
         <Box
           sx={{
@@ -385,4 +291,15 @@ const Why = () => {
   );
 };
 
-export default Why;
+export const getServerSideProps: GetServerSideProps<CommercialProps> = async () => {
+  // Shuffle companies on the server for each page load
+  const shuffledCompanies = shuffleArray(companies);
+
+  return {
+    props: {
+      shuffledCompanies,
+    },
+  };
+};
+
+export default Commercial;
