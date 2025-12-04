@@ -15,13 +15,12 @@ const root: SxProps = {
   width: '100%',
   bottom: { _: '0', md: 'unset' },
   zIndex: 1200,
-  py: 2,
-  pr: { _: '40px', md: '100px' },
-  pl: { _: '40px', md: '50px' },
-  bgcolor: COLORS.turquoise,
-  color: COLORS.white,
-  minHeight: '74px',
-  display: { _: null, md: 'flex' },
+  py: { _: 0.75, md: 1 },
+  pr: { _: '40px', md: '74px' },
+  pl: { _: 2, md: 2 },
+  bgcolor: COLORS.brightSun,
+  color: COLORS.nileBlue,
+  display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
 };
@@ -91,7 +90,10 @@ const NewsBanner = ({
       }}
     >
       <Box sx={{ textAlign: { _: 'center', md: 'left' } }}>
-        <Typography variant="body2" sx={{ fontSize: '18px', lineHeight: '26px' }}>
+        <Typography
+          variant="body2"
+          sx={{ fontSize: { _: '16px', md: '18px' }, lineHeight: '26px', fontWeight: 500 }}
+        >
           {text}
         </Typography>
       </Box>
@@ -99,8 +101,8 @@ const NewsBanner = ({
         sx={{
           minWidth: 175,
           textAlign: { _: 'center', md: 'left' },
-          ml: { _: 0, md: 3 },
-          mt: { _: 3, md: 0 },
+          ml: { _: 0, md: 2 },
+          mt: { _: 1.5, md: 0 },
         }}
       >
         {button && button[0] && button[0].value && (
@@ -117,11 +119,11 @@ const NewsBanner = ({
           alignItems: 'center',
           justifyContent: 'center',
           width: { _: '40px', md: '74px' },
-          height: { _: '50px', md: '100%' },
+          height: '100%',
           right: 0,
           top: 0,
-          borderLeft: { md: '2px solid rgba(225, 225, 225, 0.6)' },
-          color: COLORS.white,
+          borderLeft: { md: '2px solid rgba(0, 0, 0, 0.1)' },
+          color: COLORS.nileBlue,
           cursor: 'pointer',
         }}
       >
