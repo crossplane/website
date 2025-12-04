@@ -13,6 +13,7 @@ import * as routes from 'src/routes';
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import CrossplaneLogosSection from 'src/components/CrossplaneLogosSection';
+import VideoSection from 'src/components/VideoSection';
 import Button from 'src/elements/Button';
 import Link from 'src/elements/Link';
 import iceCreamIcon from 'public/icecream-icon.svg';
@@ -288,6 +289,14 @@ const Home = () => {
           backgroundColor: '#fff',
         }}
       >
+        <Box sx={{ pb: { _: 10, md: 16 } }}>
+          <VideoSection
+            videoId="XKUi8xxkyjM"
+            title="See how it works"
+            description="Learn what problems Crossplane solves and see it in action."
+          />
+        </Box>
+
         <Box sx={{ maxWidth: 950, mx: 'auto', pb: { _: 13, md: 16 }, textAlign: 'center' }}>
           <Typography variant="h2" sx={{ mb: 2.5 }}>
             {cmsData.section_1_title}
