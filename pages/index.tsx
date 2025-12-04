@@ -13,7 +13,6 @@ import * as routes from 'src/routes';
 import PageProvider from 'src/components/PageProvider';
 import Section from 'src/components/Section';
 import CrossplaneLogosSection from 'src/components/CrossplaneLogosSection';
-import V2Banner from 'src/components/V2Banner';
 import Button from 'src/elements/Button';
 import Link from 'src/elements/Link';
 import iceCreamIcon from 'public/icecream-icon.svg';
@@ -121,7 +120,6 @@ const HeaderSection = (props: HomePageHeader) => {
             </Button>
           ))}
         </Box>
-        <V2Banner />
       </Box>
     </>
   );

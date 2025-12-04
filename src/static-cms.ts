@@ -1,31 +1,25 @@
-export const newsBannerData: NewsBanner | undefined = undefined;
-/* commenting out the news banner while it is not being used, it can be added back by removing the comment
-   block and removing the assignment to undefined just above.
-{
-  text:
-    'New event! Level Up with Crossplane, presented by Upbound, goes deeper with Crossplane 1.15, compositions, ' +
-    'testing patterns, and more.',
+export const newsBannerData: NewsBanner | undefined = {
+  text: 'Crossplane v2 is here. Build control planes for applications, not just infrastructure.',
   button: [
     {
-      id: 'news-learn-more-1-5',
+      id: 'news-v2',
       value: {
         icon: undefined,
         link: [
           {
-            id: 'a253a327-e216-4764-aac3-c660a417359d',
+            id: 'v2-whats-new',
             type: 'external_url',
-            value:
-              'https://blog.crossplane.io/go-deeper-with-control-planes-at-level-up-with-crossplane-presented-by-upbound/',
+            value: 'https://docs.crossplane.io/latest/whats-new/',
           },
         ],
-        text: 'Learn more \u0026 register',
+        text: 'Learn More',
         has_arrow: false,
         style_type: 'whiteOutlined',
       },
     },
   ],
-  banner_id: '1-5',
-}; */
+  banner_id: 'v2',
+};
 
 export const indexData: HomePage = {
   header: [
