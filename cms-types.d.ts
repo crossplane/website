@@ -48,6 +48,7 @@ type Link = [
 type ButtonStyleType =
   | 'whiteContained'
   | 'whiteOutlined'
+  | 'darkOutlined'
   | 'turquoiseContained'
   | 'gradientContained'
   | 'linkWaterContained';

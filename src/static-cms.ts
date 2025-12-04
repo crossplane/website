@@ -14,7 +14,7 @@ export const newsBannerData: NewsBanner | undefined = {
         ],
         text: 'Learn More',
         has_arrow: false,
-        style_type: 'whiteOutlined',
+        style_type: 'darkOutlined',
       },
     },
   ],
