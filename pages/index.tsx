@@ -115,7 +115,7 @@ const HeaderSection = (props: HomePageHeader) => {
             <Typography variant="body_normal" color="#fff">
               Expose declarative APIs that humans, automation, and AI systems can safely act on
             </Typography>
-          </Box>          
+          </Box>
         </Box>
       </Box>
       <Box sx={{ mt: 6, mb: { _: 6, sm: 10 } }}>

@@ -159,8 +159,8 @@ export const indexData: HomePage = {
           'Crossplane builds on the class leading Kubernetes control plane, extending its battle hardened ' +
           'reliability and security features like Role Based Access Control (RBAC) to orchestrate everything - not ' +
           'just containers. By extending Kubernetes’ control model beyond containers, Crossplane enables ' +
-          'a unified control layer for infrastructure. Because it shares a foundation with Kubernetes,',
-          'Crossplane also integrates smoothly with the broader cloud-native ecosystem, allowing platforms',
+          'a unified control layer for infrastructure. Because it shares a foundation with Kubernetes, ' +
+          'Crossplane also integrates smoothly with the broader cloud-native ecosystem, allowing platforms ' +
           'to build automation and higher-level tooling without reinventing infrastructure fundamentals.',
         link_text: 'Learn More',
         link: [

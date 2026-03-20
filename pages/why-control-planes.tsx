@@ -236,8 +236,8 @@ const Why = ({}: Props) => {
             Crossplane was originally created by Upbound
           </Typography>
           <Typography variant="body_normal" sx={{ mb: 4 }}>
-            Upbound helps you build, deploy, and manage intelligent internal cloud platforms using control
-            planes, powered by Crossplane and optimized by Upbound.
+            Upbound helps you build, deploy, and manage intelligent internal cloud platforms using
+            control planes, powered by Crossplane and optimized by Upbound.
           </Typography>
           <Link
             href={routes.upboundUrl}
