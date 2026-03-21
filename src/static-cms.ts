@@ -71,8 +71,8 @@ export const indexData: HomePage = {
     'Upbound built Crossplane to help organizations build their platforms like the cloud vendors build theirs—with ' +
     'control planes. Crossplane is an open source, CNCF project built on the foundation of Kubernetes to ' +
     'orchestrate anything. Encapsulate policies, permissions, and other guardrails behind a custom API layer to ' +
-    'enable consumers —whether human users, automated workflows, or AI agents— ' +
-    'to self-service without needing to become an infrastructure expert.',
+    'enable consumers, whether human users, automated workflows, or AI agents, to ' +
+    'self-service without needing to become an infrastructure expert.',
   section_1_button: [
     {
       value: {
@@ -117,9 +117,9 @@ export const indexData: HomePage = {
         text:
           'Crossplane is designed from the ground up with extension in mind. From Providers that extend ' +
           'Crossplane to orchestrate new kinds of applications and infrastructure, to Configurations that extend ' +
-          'Crossplane to expose new APIs, our community will help you find what you need to build your ideal control' +
-          'plane. This extensibility makes Crossplane easy to integrate with higher-level automation and tooling,' +
-          'including AI-assisted workflows. Interested in building your own extensions?',
+          'Crossplane to expose new APIs, our community will help you find what you need to build your ideal ' +
+          'controlplane. This extensibility makes Crossplane easy to integrate with higher-level automation and ' +
+          'tooling, including AI-assisted workflows. Interested in building your own extensions?',
         link_text: 'Join the Crossplane Slack Channel',
         link: [
           {
@@ -138,8 +138,8 @@ export const indexData: HomePage = {
           'Most platforms require that you buy into their opinionated API concepts. With Crossplane you can ' +
           'build a platform around your own opinions using declarative APIs that make intent explicit, ' +
           'auditable, and and machine-readable—prerequisites for operating platforms at scale. ' +
-          'We know the best control planes are tailored to the task at hand' +
-          'so we designed Crossplane as a framework that puts you in control. Use Crossplane to design a ' +
+          'We know the best control planes are tailored to the task at hand, so ' +
+          'we designed Crossplane as a framework that puts you in control. Use Crossplane to design a ' +
           'control plane that exposes declarative APIs tailored to your unique orchestration needs.',
         link_text: 'Learn More',
         link: [
