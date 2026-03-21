@@ -70,8 +70,9 @@ export const indexData: HomePage = {
   section_1_sub_title:
     'Upbound built Crossplane to help organizations build their platforms like the cloud vendors build theirs—with ' +
     'control planes. Crossplane is an open source, CNCF project built on the foundation of Kubernetes to ' +
-    'orchestrate anything. Encapsulate policies, permissions, and other guardrails behind a custom API line to ' +
-    'enable your customers to self-service without needing to become an infrastructure expert.',
+    'orchestrate anything. Encapsulate policies, permissions, and other guardrails behind a custom API layer to ' +
+    'enable consumers, whether human users, automated workflows, or AI agents, to ' +
+    'self-service without needing to become an infrastructure expert.',
   section_1_button: [
     {
       value: {
@@ -116,8 +117,9 @@ export const indexData: HomePage = {
         text:
           'Crossplane is designed from the ground up with extension in mind. From Providers that extend ' +
           'Crossplane to orchestrate new kinds of applications and infrastructure, to Configurations that extend ' +
-          'Crossplane to expose new APIs, our community will help you find what you need to build your ideal control ' +
-          'plane. Interested in building your own extensions?',
+          'Crossplane to expose new APIs, our community will help you find what you need to build your ideal ' +
+          'controlplane. This extensibility makes Crossplane easy to integrate with higher-level automation and ' +
+          'tooling, including AI-assisted workflows. Interested in building your own extensions?',
         link_text: 'Join the Crossplane Slack Channel',
         link: [
           {
@@ -134,8 +136,10 @@ export const indexData: HomePage = {
         title: 'Putting you in control',
         text:
           'Most platforms require that you buy into their opinionated API concepts. With Crossplane you can ' +
-          'build a platform around your own opinions. We know the best control planes are tailored to the task at ' +
-          'hand so we designed Crossplane as a framework that puts you in control. Use Crossplane to design a ' +
+          'build a platform around your own opinions using declarative APIs that make intent explicit, ' +
+          'auditable, and and machine-readable—prerequisites for operating platforms at scale. ' +
+          'We know the best control planes are tailored to the task at hand, so ' +
+          'we designed Crossplane as a framework that puts you in control. Use Crossplane to design a ' +
           'control plane that exposes declarative APIs tailored to your unique orchestration needs.',
         link_text: 'Learn More',
         link: [
@@ -154,8 +158,10 @@ export const indexData: HomePage = {
         text:
           'Crossplane builds on the class leading Kubernetes control plane, extending its battle hardened ' +
           'reliability and security features like Role Based Access Control (RBAC) to orchestrate everything - not ' +
-          'just containers. Because Crossplane shares a foundation with Kubernetes it integrates smoothly with most ' +
-          'popular cloud native tools.',
+          'just containers. By extending Kubernetes’ control model beyond containers, Crossplane enables ' +
+          'a unified control layer for infrastructure. Because it shares a foundation with Kubernetes, ' +
+          'Crossplane also integrates smoothly with the broader cloud-native ecosystem, allowing platforms ' +
+          'to build automation and higher-level tooling without reinventing infrastructure fundamentals.',
         link_text: 'Learn More',
         link: [
           {

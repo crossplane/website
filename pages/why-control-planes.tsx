@@ -95,14 +95,14 @@ const HeaderSection = () => {
         }}
       >
         <Typography variant="h2" color="#fff" sx={{ mb: 5 }}>
-          Control planes — the future of cloud
+          Control planes — the foundation of modern cloud and the future of AI
         </Typography>
         <Typography variant="body_normal" color="#fff">
           The cloud vendors have been building with control planes for years. Now Crossplane helps
           you do the same. Control planes are self-healing—they automatically correct drift.
-          Consumers can self-service fast because control planes offer a single point of control for
-          policy and permissions and control planes integrate easily with other systems because they
-          expose an API, not just a command-line.
+          Engineers and AI agents can self-service fast using declarative APIs. Control planes offer
+          a single point of control for policy and permissions, preventing people and automation
+          alike from making costly mistakes.
         </Typography>
         <Box sx={headerButtons}>
           <Button styleType="turquoiseContained" href={routes.resourcesUrl} target="_blank">
@@ -130,27 +130,27 @@ const HeaderSection = () => {
 const whyItems = [
   {
     icon: icon_1,
-    title: 'Declarative configuration',
+    title: 'Declarative infrastructure management',
     // eslint-disable-next-line max-len
-    text: 'Crossplane lets you build a control plane with Kubernetes-style declarative and API-driven configuration and management for anything. Through this approach, applications and infrastructure managed through your control plane are self-healing right out of the box.',
+    text: 'Crossplane lets you build a control plane for anything, with Kubernetes-style declarative and API-driven configuration. You describe what you want, not the steps to get there. The control plane figures out execution. You design the APIs, so engineers and AI agents can only do what you let them. Your APIs are self-describing, so they can also discover what is possible on-demand.',
   },
   {
     icon: icon_2,
     title: 'Unify application and infrastructure configuration and deployment',
     // eslint-disable-next-line max-len
-    text: 'Crossplane enables application and infrastructure configuration to co-exist in the same control plane, reducing the complexity of your toolchains and deployment pipelines.',
+    text: 'Crossplane enables application and infrastructure configuration to co-exist in the same control plane, giving both engineers and automated systems one place to understand and manage changes.',
   },
   {
     icon: icon_3,
-    title: 'One source of truth for infrastructure configuration and setup',
+    title: 'A single source of truth for infrastructure',
     // eslint-disable-next-line max-len
-    text: 'Control planes built with Crossplane integrate with CI/CD pipelines, so teams can create, track, and approve changes using GitOps best practices.',
+    text: 'Control planes built with Crossplane integrate with CI/CD pipelines, so teams can create, track, and approve changes using GitOps best practices. A single source of truth is essential not just for humans, but for automated systems and AI-driven tooling that need consistent, auditable inputs.',
   },
   {
     icon: icon_4,
     title: 'Automate operational tasks with reconciling controllers',
     // eslint-disable-next-line max-len
-    text: 'Your control planes are made up of several controllers, which are responsible for the entire lifecycle of a resource. Each resource is responsible for provisioning, health, scaling, failover, and actively responding to external changes that deviate from the desired configuration.',
+    text: 'Your control planes are made up of several controllers, which are responsible for the entire lifecycle of a resource. Each resource is responsible for provisioning, health, scaling, failover, and actively responding to external changes that deviate from the desired configuration. This reconciliation loop provides a stable execution model that higher-level automation and AI systems can build on without bypassing safety or policy.',
   },
   {
     icon: icon_5,
@@ -236,8 +236,8 @@ const Why = ({}: Props) => {
             Crossplane was originally created by Upbound
           </Typography>
           <Typography variant="body_normal" sx={{ mb: 4 }}>
-            Upbound helps you build, deploy, and manage your internal cloud platforms using control
-            planes, powered by Crossplane and optimized by Upbound.
+            Upbound helps you build, deploy, and manage intelligent internal cloud platforms using
+            control planes, powered by Crossplane and optimized by Upbound.
           </Typography>
           <Link
             href={routes.upboundUrl}
