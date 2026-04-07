@@ -18,6 +18,7 @@ import vshnLogo from 'public/vshn-logo.svg';
 import alaudaLogo from 'public/alauda-logo.svg';
 import infracloudLogo from 'public/infracloud-logo.svg';
 import cloudflavorLogo from 'public/home-page/cloudflavor.svg';
+import procedureLogo from 'public/procedure-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
@@ -144,6 +145,17 @@ const companies: Company[] = [
       'Kubernetes and cloud platforms, they enable seamless infrastructure automation and management.',
     learnMoreUrl: 'https://cloudflavor.io/products/crossplane/',
     githubUrl: 'https://github.com/cloudflavor',
+  },
+  {
+    logo: procedureLogo,
+    alt: 'Procedure logo',
+    name: 'Procedure',
+    description:
+      'Procedure provides Crossplane consulting, implementation, and support services to help ' +
+      'organizations adopt cloud-native infrastructure automation. With expertise in Kubernetes ' +
+      'and multi-cloud environments, they help teams build and manage control planes at scale.',
+    learnMoreUrl: 'https://procedure.tech/services/crossplane-consulting',
+    githubUrl: 'https://github.com/proceduretech',
   },
 ];
 
