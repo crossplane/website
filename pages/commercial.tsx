@@ -19,6 +19,7 @@ import alaudaLogo from 'public/alauda-logo.svg';
 import infracloudLogo from 'public/infracloud-logo.svg';
 import cloudflavorLogo from 'public/home-page/cloudflavor.svg';
 import procedureLogo from 'public/procedure-logo.svg';
+import kodekloudLogo from 'public/kodekloud-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
 import gradientGraphicHeader from 'public/background-graphics/gradient-graphic-header.png';
 import gradientGraphicSM from 'public/background-graphics/gradient-graphic-sm.png';
@@ -156,6 +157,17 @@ const companies: Company[] = [
       'and multi-cloud environments, they help teams build and manage control planes at scale.',
     learnMoreUrl: 'https://procedure.tech/services/crossplane-consulting',
     githubUrl: 'https://github.com/proceduretech',
+  },
+  {
+    logo: kodekloudLogo,
+    alt: 'KodeKloud logo',
+    name: 'KodeKloud',
+    description:
+      'KodeKloud offers hands-on Crossplane training through guided labs and real practice ' +
+      'environments. Build practical control-plane and platform skills alongside Kubernetes and ' +
+      'cloud-native workflows.',
+    learnMoreUrl: 'https://kode.wiki/41OZSIX',
+    githubUrl: 'https://github.com/kodekloudhub',
   },
 ];
 
