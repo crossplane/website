@@ -166,7 +166,7 @@ const companies: Company[] = [
       'KodeKloud offers hands-on Crossplane training through guided labs and real practice ' +
       'environments. Build practical control-plane and platform skills alongside Kubernetes and ' +
       'cloud-native workflows.',
-    learnMoreUrl: 'https://learn.kodekloud.com/courses/learn-by-doing-crossplane',
+    learnMoreUrl: 'https://kode.wiki/41OZSIX',
     githubUrl: 'https://github.com/kodekloudhub',
   },
 ];
