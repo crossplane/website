@@ -17,7 +17,6 @@ import upboundLogo from 'public/upbound-logo.svg';
 import vshnLogo from 'public/vshn-logo.svg';
 import alaudaLogo from 'public/alauda-logo.svg';
 import infracloudLogo from 'public/infracloud-logo.svg';
-import cloudflavorLogo from 'public/home-page/cloudflavor.svg';
 import procedureLogo from 'public/procedure-logo.svg';
 import kodekloudLogo from 'public/kodekloud-logo.svg';
 import cncfLogoColor from 'public/cncf-logo-color.png';
@@ -135,17 +134,6 @@ const companies: Company[] = [
       'innovation, not operations, with their support.',
     learnMoreUrl: 'https://www.infracloud.io/crossplane-consulting-support/',
     githubUrl: 'https://github.com/infracloudio',
-  },
-  {
-    logo: cloudflavorLogo,
-    alt: 'Cloudflavor logo',
-    name: 'Cloudflavor',
-    description:
-      'Cloudflavor provides comprehensive Crossplane consulting and managed services to help ' +
-      'organizations adopt and scale their cloud-native infrastructure. With deep expertise in ' +
-      'Kubernetes and cloud platforms, they enable seamless infrastructure automation and management.',
-    learnMoreUrl: 'https://cloudflavor.io/products/crossplane/',
-    githubUrl: 'https://github.com/cloudflavor',
   },
   {
     logo: procedureLogo,
