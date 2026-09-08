@@ -88,7 +88,6 @@ import verizon from 'public/home-page/crossplane-logos/verizon-original.svg';
 import visa from 'public/home-page/crossplane-logos/visa-original.svg';
 import yunify from 'public/home-page/crossplane-logos/yunify-original.svg';
 import sixsense from 'public/home-page/crossplane-logos/6sense-original.svg';
-import cloudflavor from 'public/home-page/crossplane-logos/cloudflavor.svg';
 
 const crossplaneLogos = [
   absa,
@@ -181,7 +180,6 @@ const crossplaneLogos = [
   visa,
   yunify,
   sixsense,
-  cloudflavor,
 ];
 
 export default crossplaneLogos;
